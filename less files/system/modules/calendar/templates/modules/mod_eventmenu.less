@@ -1,0 +1,26 @@
+ /*  less stylesheets for contao
+    
+    derived from: 
+        /system/modules/calendar/templates/modules/mod_eventmenu.html5
+*/
+
+@import('/system/modules/core/templates/block/blocks_(all)_as_mixin.less')
+
+div.mod_eventmenu {
+    .block_unsearchable()
+    
+    ul.level_1 { /* years */ 
+        li.year.submenu {
+            span.active { /* currently selected year */ }
+            a { /* link to another year */
+            ul.level_2 { /* months */
+                li {
+                    &.active span.active { /* currently selected month */ }
+                    &.? { /* custom month class */ }
+                    
+                    a { /* link to another month */ }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,35 @@
+ /*  less stylesheets for contao
+    
+    derived from: 
+        /system/modules/core/templates/block/block_searchable.html5
+        /system/modules/core/templates/block/block_unsearchable.html5
+        /system/modules/core/templates/block/block_section.html5
+        
+*/
+
+.block_searchable() {
+    &.block  {
+        h1 { /* headline level 1, if available */ }
+        h2 { /* headline level 2, if available */ }
+        h3 { /* headline level 3, if available */ }
+        h4 { /* headline level 4, if available */ }
+        h5 { /* headline level 5, if available */ }
+        h6 { /* headline level 6, if available */ }
+    }
+}
+
+.block_unserchable() {
+    .block_searchable()
+}
+
+.block_section() {
+    div#? { /* just a div with a custom id */ }
+}
+
+.block_sections() {
+    div.custom {
+        div#? { /* a div with a custom id */ }
+            div.inside { /* the section content is placed here */ }
+        }
+    }
+}

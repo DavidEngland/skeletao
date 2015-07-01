@@ -1,0 +1,71 @@
+/*  less stylesheets for contao
+    
+    derived from: 
+        /system/modules/calendar/templates/calendar/cal_default.html5
+        /system/modules/calendar/templates/calendar/cal_mini.html5
+        /system/modules/calendar/modules/ModuleCalendar.php
+*/
+
+table.calendar, table.minicalendar { /* calendar & minicalendar styles */
+    thead { /* header */
+        tr { /* header rows */
+            th { /* header cells */
+                &.head { /* links to previous / current / next month */
+                    &.previous { /* link to previous month */ }
+                    &.current { /* link to current month */ }
+                    &.next { /* link to next month */ }
+                    
+                    a { /* previous / current / next month links */ }
+                }   
+                &.label { /* name of day*/ 
+                    &.col_first { /* first column in calendar */ }
+                    &.col_last  { /* last column in calendar */ }
+                    &.weekend { /* indicating sutterday or sunday */ }
+                    
+                    &.? { /* class for the specific day */ }
+                    
+                    span { 
+                        /* hiding parts of day names: Mo<span>day</span>
+                           in minicalendar class "invisible" is added */
+                    }
+                    
+                }
+            }
+        }
+    }
+    
+    tbody { /* days with or without events */
+        tr { /* one row per week */
+            &.first,
+            &.week_1 { /* 1. week / row */ } 
+            &.week_2 { /* 2. week / row */ } 
+            &.week_3 { /* 3. week / row */ } 
+            &.week_4 { /* 4. week / row */ } 
+            &.week_5 { /* 5. week / row */ }  
+            &.week_6 { /* 6. week / row */ } 
+            &.last { /* last week / row, might be week 4, 5 or 6 */ } 
+            
+            td.days { /* table cells, representing a day */
+                &.col_first { /* first column in calendar */ }
+                &.col_last  { /* last column in calendar */ }
+                &.weekend { /* indicating sutterday or sunday */ }
+                &.today { /* today's table cell */ }
+                &.selected { /* selected day */ }
+                &.active { /* days with an event */ }
+                &.empty { /* empty cells, not counting to the selected month */ }
+                
+                a { /* link to event for calendar and minicalendar */ }
+            }
+        }
+    }
+}
+
+table.calendar tbody tr td { /* specific day and event sytles for calendar */
+    div.header { /* day of month */ }
+    div.event { /* text for the event */ 
+        &.cal_? { /* class for event calendar */ }
+        &.? { /* class specific for event */ }
+        
+        a { /* link to event */ }
+    }
+}

@@ -1,0 +1,20 @@
+ /*  less stylesheets for contao
+    
+    derived from: 
+        /system/modules/calendar/templates/modules/mod_event.html5
+*/
+
+@import('/system/modules/core/templates/block/blocks_(all)_as_mixin.less')
+
+div.mod_event {
+    .block_searchable()
+    p.back a { /* a back link */ }
+    
+    div.ce_comments.block { /* comments if available */ 
+        /* TODO */
+        .add_comment()
+        .list_comments()
+        .pagination()
+        .mod_comment_form()
+    }
+}

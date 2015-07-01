@@ -1,0 +1,18 @@
+ /*  less stylesheets for contao
+    
+    derived from: 
+        /system/modules/calendar/templates/events/event_upcoming.html5
+        /system/modules/calendar/modules/ModuleEventlist.php
+*/
+
+div.event.layout_upcoming {
+    &.? { /* event specific class */ }
+    &.even { /* every even event */ }
+    &.odd { /* every odd event */ }
+    span {
+        date { /* date */ }
+        time { /* time, if available */ }
+    }
+    a { /* link to event */ }
+    div.empty { /* no events found */ }
+}
