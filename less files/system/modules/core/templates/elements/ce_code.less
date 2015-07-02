@@ -1,0 +1,40 @@
+ /*  less stylesheets for contao
+    
+    derived from: 
+        /system/modules/core/templates/elements/ce_code.html5
+        /system/modules/core/elements/ContentCode.php
+*/
+
+@import('/system/modules/core/templates/block/blocks_(all)_as_mixin.less')
+
+div.mod_code {
+    .block_searchable()
+    
+    pre {
+        &.brush: { }
+        .shbrushapacheconf { /* highlighting for apacheconf */ }
+        .shbrushas3 { /* highlighting for as3 */ }
+        .shbrushbash { /* highlighting for bash */ }
+        .shbrushcpp { /* highlighting for c++ */ }
+        .shbrushcsharp { /* highlighting for c# */ }
+        .shbrushcss { /* highlighting for css */ }
+        .shbrushdelphi { /* highlighting for delphi */ }
+        .shbrushdiff { /* highlighting for diff */ }
+        .shbrushgroovy { /* highlighting for groovy */ }
+        .shbrushxml { /* highlighting for xml */ }
+        .shbrushjava { /* highlighting for java */ }
+        .shbrushjavafx { /* highlighting for javafx */ }
+        .shbrushjscript { /* highlighting for javascript */ }
+        .shbrushperl { /* highlighting for perl */ }
+        .shbrushphp { /* highlighting for php */ }
+        .shbrushpowershell { /* highlighting for powershell */ }
+        .shbrushpython { /* highlighting for python */ }
+        .shbrushruby { /* highlighting for ruby */ }
+        .shbrushscala { /* highlighting for scala */ }
+        .shbrushsql { /* highlighting for sql */ }
+        .shbrushplain { /* highlighting for plain text */ }
+        .shbrushvb { /* highlighting for vb */ }
+        .shbrushxml { /* highlighting for xml or xhtml */ }
+    }
+}
+

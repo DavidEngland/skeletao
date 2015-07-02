@@ -1,0 +1,20 @@
+ /*  less stylesheets for contao
+    
+    derived from: 
+        /system/modules/core/templates/elements/ce_hyperlink_image.html5
+*/
+
+@import('/system/modules/core/templates/block/blocks_(all)_as_mixin.less')
+
+div.ce_hyperlink_image {
+    .block_searchable()
+    
+    figure.image_container {
+        a.hyperlink_img { 
+            /* TODO */
+            .image()
+        }
+        figcaption.caption { /* captition if available */ }
+    }
+}
+

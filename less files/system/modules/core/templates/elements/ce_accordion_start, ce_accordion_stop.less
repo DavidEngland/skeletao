@@ -1,0 +1,19 @@
+ /*  less stylesheets for contao
+    
+    derived from: 
+        /system/modules/core/templates/elements/ce_accordion_start.html5
+        /system/modules/core/templates/elements/ce_accordion_stop.html5
+        /system/modules/core/elements/ContentAccordionStart.php
+        /system/modules/core/elements/ContentAccordionStop.php
+*/
+
+section.ce_accordion_start {
+    &.block { }
+    &.ce_accordion { /* it's also an accordion element */ }
+    
+    div {
+        &.toggler { /* might have a custom class name instead */ }
+        &.accordion { /* might have a custom class name instead */ }
+    }
+}
+

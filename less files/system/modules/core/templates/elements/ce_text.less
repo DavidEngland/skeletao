@@ -1,0 +1,21 @@
+ /*  less stylesheets for contao
+    
+    derived from: 
+        /system/modules/core/templates/elements/ce_text.html5
+*/
+
+@import('/system/modules/core/templates/block/blocks_(all)_as_mixin.less')
+
+div.ce_text {
+    .block_searchable()
+    
+    figure.image_container {
+        a { /* link, if available */ }
+        
+        /* TODO */
+        .image()
+        
+                figcaption.caption { /* caption, if available */ }
+    }
+}
+
