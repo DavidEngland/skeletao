@@ -1,0 +1,20 @@
+ /*  less stylesheets for contao
+    
+    derived from: 
+        /system/modules/core/templates/forms/form_explanation.html5
+        /system/modules/core/forms/FormExplanation.php
+*/
+
+/* breaks out of the classic left / right scheme */
+
+/* for tableless layout */
+div {
+    &.widget { }
+    &.widget-explanation {  }
+}
+
+/* for table based layout */
+td { 
+    &.colspan { }
+    &.explanation { }
+}

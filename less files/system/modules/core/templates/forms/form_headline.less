@@ -1,0 +1,20 @@
+ /*  less stylesheets for contao
+    
+    derived from: 
+        /system/modules/core/templates/forms/form_headline.html5
+        /system/modules/core/forms/FormHeadline.php
+*/
+
+/* breaks out of the classic left / right scheme */
+
+/* for tableless layout */
+div {
+    &.widget { }
+    &.widget-headline {  }
+}
+
+/* for table based layout */
+td { 
+    &.colspan { }
+    &.headline { }
+}

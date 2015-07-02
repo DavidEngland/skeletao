@@ -1,0 +1,29 @@
+ /*  less stylesheets for contao
+    
+    derived from: 
+        /system/modules/core/templates/forms/form_select.html5
+        /system/modules/core/forms/FormSelect.php
+*/
+
+
+.widget-select { /* for tableless layout */ }
+
+/* in the label block */
+label { /* if available */ 
+    span.mandatory { /* the small star indicating a mandatory field */ }
+    span.invisible { /* text for screen reader for mandatory fields */ }
+}
+
+/* in the input block */
+p.error { /* error message, if available */ }
+select {
+    &.captcha { }
+    &.mandatory { }
+    &.mutliselect { }
+    
+    optgroup { }
+    option { }
+}
+
+
+input.submit { /* submit button, if available */ }

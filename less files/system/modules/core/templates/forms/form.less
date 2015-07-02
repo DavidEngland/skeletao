@@ -1,0 +1,35 @@
+ /*  less stylesheets for contao
+    
+    derived from: 
+        /system/modules/core/templates/forms/form.html5
+        /system/modules/core/templates/forms/form_row.html5
+        /system/modules/core/forms/form.html5
+*/
+
+div.form {
+    &.tableless { /* for layout without table */ 
+        div.widget { /* the form "rows" */ }
+    }
+    &.tableform { /* for a table based layout */ }
+    &.block { }
+    
+    h1, h2, h3, h4, h5, h6 { /* a headline, if available */ }
+    
+    div.formbody {
+        table { /* only for table based layout */ 
+            tr { /* form rows */
+                &.row_first { /* first row */ }
+                &.row_last { /* last row */ }
+                &.even { /* even row number */ }
+                &.odd { /* odd row number */ }
+                &.row_? { /* number of row */ }
+            
+                td {
+                    &.col_0, .col_first { /* labels are placed here */ }
+                    &.col_1, .col_last { /* inputs are placed here */ }
+                }
+            }
+        }
+    }
+}
+

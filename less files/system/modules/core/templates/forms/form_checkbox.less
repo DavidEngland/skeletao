@@ -1,0 +1,27 @@
+ /*  less stylesheets for contao
+    
+    derived from: 
+        /system/modules/core/templates/forms/form_checkbox.html5
+        /system/modules/core/forms/FormCheckbox.php
+*/
+
+
+.widget-checkbox { /* for tableless layout */ }
+
+/* label block is empty */
+
+/* in the input block */
+fieldset.checkbox_container {
+    legend { /* if available */
+        span.mandatory { /* the small star indicating a mandatory field */ }
+        span.invisible { /* text for screen reader for mandatory fields */ }
+    }
+    p.error { /* error message, if available */ }
+    
+    span {
+        input.checkbox
+        label
+    }
+}
+
+input.submit { /* submit button, if available */ }
