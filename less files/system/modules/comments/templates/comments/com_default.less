@@ -1,0 +1,19 @@
+/*  less stylesheets for contao
+    
+    derived from: 
+        /system/modules/comments/templates/comments/com_default.html5
+*/
+
+div.comment_default {
+    &.? { /* custom class */ }
+    
+    p.info { /* meta info, like name, website, etc */
+        a { /* link to website */ }
+        time.date { /* date of comment */ }
+    }
+    div.comment { /* the comment itself */ }
+    div.reply { /* reply, if available */
+        p.info { /* like name of reply author */ }
+        div.comment { /* the reply itself */ }
+    }
+}

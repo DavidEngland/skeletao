@@ -5,6 +5,8 @@
 */
 
 @import('/system/modules/core/templates/block/blocks_(all)_as_mixin.less')
+@import('/system/modules/calendar/templates/elements/ce_comments.less')
+@import('/system/modules/calendar/templates/modules/mod_comment_form.less')
 
 div.mod_event {
     .block_searchable()
@@ -12,9 +14,12 @@ div.mod_event {
     
     div.ce_comments.block { /* comments if available */ 
         /* TODO */
-        .add_comment()
-        .list_comments()
+        
+        /* there seems to be an 'add comment' button */
         .pagination()
-        .mod_comment_form()
+        
+        /* DONE */
+        .div.ce_comments()
+        .mod_comment_form_mixin()
     }
 }

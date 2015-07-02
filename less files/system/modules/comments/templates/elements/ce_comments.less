@@ -1,0 +1,20 @@
+ /*  less stylesheets for contao
+    
+    derived from: 
+        /system/modules/calendar/templates/elements/ce_comments.html5
+*/
+
+@import('/system/modules/core/templates/block/blocks_(all)_as_mixin.less')
+@import('/system/modules/calendar/templates/modules/mod_comment_form.less')
+
+div.ce_comments {
+    .block_searchable()
+    
+    /* comments, one after the other /*
+    
+    /* TODO */
+    .pagination()
+    
+    /* DONE */
+    .mod_comment_form_mixin()
+}
