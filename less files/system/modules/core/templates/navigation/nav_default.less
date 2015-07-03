@@ -1,0 +1,51 @@
+ /*  less stylesheets for contao
+    
+    derived from: 
+        /system/modules/core/templates/navigation/nav_default.html5
+        /system/modules/core/modules/Module.html5
+*/
+
+
+.navigation_mixin(@level) {
+    ul.@level {
+        li {
+            &.forward { /* this page forwards to another page */ }
+            &.trail { /* parent in the current selection */ }
+            &.submenu { /* this items contains another navigation */ }
+            &.protected { /* a protected page */ }
+            &.sibling { /* a sibling to the current page */ }
+                       
+            &.active { /* current selected page, does not contain a link */ 
+                span.active { /* page title */ }
+            }
+            
+            a { /* link to page, except for .active */
+                &.forward { /* this page forwards to another page */ }
+                &.trail { /* parent in the current selection */ }
+                &.submenu { /* this items contains another navigation */ }
+                &.protected { /* a protected page */ }
+                &.sibling { /* a sibling to the current page */ }
+            }
+        }
+    }
+}
+
+ul.level_0 { /* first level of navigation */ 
+    .navigation_mixin(level_0)
+    
+    ul.level_1 { /* second level of navigation */ 
+        .navigation_mixin(level_1)
+    
+        ul.level_2 { /* third level of navigation, surely? */ 
+            .navigation_mixin(level_2)
+    
+            ul.level_3 { /* fourth level of navigation, really think about it */ 
+                .navigation_mixin(level_3)
+                
+                ul.level_4 { /* fifth level of navigation, maybe for sitemap */ 
+                    .navigation_mixin(level_4)
+                }
+            }
+        }
+    }
+}

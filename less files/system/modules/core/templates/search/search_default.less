@@ -1,0 +1,26 @@
+ /*  less stylesheets for contao
+    
+    derived from: 
+        /system/modules/core/templates/search/search_default.html5
+        /system/modules/core/modules/ModuleSearch.html5
+*/
+
+div {
+    &.first { /* first search result */ }
+    &.last { /* last search result */ }
+    &.even { /* even search result number */ }
+    &.odd { /* odd search result number */ }
+    
+    h3 { /* title of search result */
+        a { /* link to search result */
+            span.relevance { /* relevance of search result */ }
+        }
+    }
+    
+    p {
+        &.context { /* search context, if available */ }
+        &.url { /* url of search result */ 
+            span.size { /* size of search result */ }
+        }
+    }
+}

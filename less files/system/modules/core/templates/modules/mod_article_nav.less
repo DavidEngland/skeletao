@@ -7,32 +7,9 @@
 
 div.mod_article_nav {
     &.block { /* this is also a block */ }
-    
-    /* TODO see, if these could be combined */
     &.pagination { /* this is also a pagination */ }
     
     h1, h2, h3, h4, h5, h6 { /* headline, if available */ }
     
-    ul {
-        li {
-            &.first { /* container for link to first page */ }
-            &.previous { /* container for link to previous page */ }
-            &.link { /* container for link to a page */ }
-            &.next { /* container for link to next page */ }
-            &.last { /* container for link to last page */ }
-            
-            &.current { /* container displaying current page - no link */ }
-                span.current { /* current page */ }
-            }
-            
-            a { /* links to pages, current page not linked */
-                &.first { /* link to first page */ }
-                &.previous { /* link to previous page */ }
-                &.link { /* link to a page */ }
-                &.next { /* link to next page */ }
-                &.last { /* link to last page */ }
-            }
-        }
-    }       
 }
 

@@ -1,0 +1,21 @@
+ /*  less stylesheets for contao
+    
+    derived from: 
+        /system/modules/core/templates/picture/picture_default.html5
+        
+    pictures come in two different kinds: normal img tags or a picture tag for
+    responsive images with different sources
+*/
+
+/* standard image */
+
+img { 
+    &.? { /* custom class */ }
+}
+
+
+/* responsive images */
+picture {
+    source { }
+    img { }
+}
