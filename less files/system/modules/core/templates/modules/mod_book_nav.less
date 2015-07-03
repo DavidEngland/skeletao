@@ -1,0 +1,25 @@
+ /*  less stylesheets for contao
+    
+    derived from: 
+        /system/modules/core/templates/modules/mod_book_nav.html5
+        /system/modules/core/modules/ModuleBookNav.html5
+*/
+
+@import('/system/modules/core/templates/block/blocks_(all)_as_mixin.less')
+
+div.mod_article_list {
+    .block_unsearchable()
+        
+    ul {
+        li {
+            &.prev { /* link to previous page */ }
+            &.up { /* lint to containing chapter */ }
+            &.next { /* link to previous page */ }
+            
+            &.empty { /* for .prev .up or .next, containing no link */ }
+            
+            a { /* link to page, if available */ }
+        }
+    }
+}
+

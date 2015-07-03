@@ -1,0 +1,32 @@
+ /*  less stylesheets for contao
+    
+    derived from: 
+        /system/modules/core/templates/modules/mod_search.html5
+        /system/modules/core/templates/modules/mod_search_advanced.html5
+        /system/modules/core/templates/modules/mod_search_simple.html5
+        /system/modules/core/modules/ModuleSearch.html5
+*/
+
+@import('/system/modules/core/templates/block/blocks_(all)_as_mixin.less')
+
+div.mod_search {
+    .block_unsearchable()
+        
+    form { /* search form */
+        div.formbody {
+            label.invisible { /* label for screen readers */ }
+            input { /* input fields */
+                &.text { /* search field */ }
+                &.submit { /* submit button */ }
+            }
+            fieldset.radio_container { /* only for advanced search */
+                legend.invisible { /* label for screen readers */ }
+                span { /* container for radio buttons */
+                    input.radio { /* radio button */ }
+                    label { /* label for radio button */ }
+                }
+            }
+        }
+    }
+}
+

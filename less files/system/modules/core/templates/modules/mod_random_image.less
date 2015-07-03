@@ -1,0 +1,22 @@
+ /*  less stylesheets for contao
+    
+    derived from: 
+        /system/modules/core/templates/modules/mod_random_image.html5
+        /system/modules/core/modules/RandomImage.html5
+*/
+
+@import('/system/modules/core/templates/block/blocks_(all)_as_mixin.less')
+
+div.mod_random_image {
+    .block_unsearchable()
+        
+    figure.image_container {
+        a { /* link, if available */ }
+        
+        /* TODO */
+        .image()
+        
+                figcaption.caption { /* caption, if available */ }
+    }
+}
+
