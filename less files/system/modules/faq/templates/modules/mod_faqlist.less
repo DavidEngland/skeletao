@@ -1,0 +1,30 @@
+ /*  less stylesheets for contao
+    
+    derived from: 
+        /system/modules/faq/templates/modules/mod_faqlist.html5
+        /system/modules/faq/modules/ModuleFaqList.html5
+*/
+
+@import('/system/modules/core/templates/block/blocks_(all)_as_mixin.less')
+
+div.mod_faqlist {
+    .block_unsearchable()
+        
+    h2 { /* headline */ }
+    ul { /* faq category */ 
+        &.first { /* first category */ }
+        &.last { /* first category */ }
+        &.even { /* first category */ }
+        &.odd { /* first category */ }
+        
+        li { /* questions */
+            &.first { /* first category */ }
+            &.last { /* first category */ }
+            &.even { /* first category */ }
+            &.odd { /* first category */ }
+            
+            a { /* link to answer */ }
+        }
+    }
+}
+
