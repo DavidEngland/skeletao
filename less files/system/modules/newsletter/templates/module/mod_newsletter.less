@@ -1,0 +1,17 @@
+ /*  less stylesheets for contao
+    
+    derived from: 
+        /system/modules/newsletter/templates/modules/mod_article_list.html5
+*/
+
+@import('/system/modules/core/templates/block/blocks_(all)_as_mixin.less')
+
+div.mod_article_list {
+    .block_unsearchable()
+        
+    p { /* messageges to display  */ 
+        &.error { /* error message */ }
+        &.confirm { /* confirmation message */ }
+    }
+}
+
