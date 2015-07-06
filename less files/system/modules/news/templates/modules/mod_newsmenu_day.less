@@ -1,0 +1,51 @@
+ /*  less stylesheets for contao
+    
+    derived from: 
+        /system/modules/news/templates/modules/mod_newsmenu_day.html5
+        /system/modules/news/modules/ModuleNewsMenu.html5
+*/
+
+@import('/system/modules/core/templates/block/blocks_(all)_as_mixin.less')
+
+div.mod_newsmenu {
+    .block_unsearchable()
+        
+    /* TODO,  is it really a .minicalendar() ? */
+    
+    table.minicalendar {
+        thead {
+            tr {
+                th {
+                    &.label { /* day names */ }
+                    &.head { /* prev / current / next */
+                        &.previous { /* previous month */ }
+                        &.current { /* current month */ }
+                        &.next { /* next month */ }
+                        
+                        a { /* link to previous or next month */ }
+                    }
+                }
+            }
+        }
+        
+        tbody {
+            tr {
+                &.first { /* first row / week */ }
+                &.last { /* last row / week  */ }
+                &.week_? { /* number of displayed week, from 0 to 5 */ }
+                
+                td.days {
+                    &.col_first { /* first column */ }
+                    &.col_last { /* last column */ }
+                    &.empty { /* representing day not in current month */ }
+                    
+                    &.today { /* today */ }
+                    &.active { /* day with news */ 
+                        a { /* link to news */ }
+                    }
+                }
+            }
+        }
+    }
+}
+

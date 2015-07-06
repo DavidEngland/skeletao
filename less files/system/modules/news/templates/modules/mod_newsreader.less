@@ -1,0 +1,27 @@
+ /*  less stylesheets for contao
+    
+    derived from: 
+        /system/modules/news/templates/modules/mod_newsreader.html5
+        /system/modules/news/modules/ModuleNewsReader.html5
+*/
+
+@import('/system/modules/core/templates/block/blocks_(all)_as_mixin.less')
+
+div.mod_newsreader {
+    .block_searchable()
+           
+    /* TODO */
+    .articles()
+    
+    p.back a { /* back link */ }
+    
+    div.ce_comments { /* comments, if available */
+        &.block { /* also a block */ }
+
+        /* TODO */
+        .add_comment_link()
+                .comments()
+                .pagination()
+                .comment_form()
+        }
+}
