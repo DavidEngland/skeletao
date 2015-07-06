@@ -1,0 +1,81 @@
+ /*  less stylesheets for contao
+    
+    derived from: 
+        /system/modules/listing/templates/info/list_default.html5
+        /system/modules/listing/modules/ModuleListing.html5
+*/
+
+div.list_default {
+    &.listing { /* this is a listing */ }
+    &.ce_table { /* table content element */ }
+    &.block { /* and also a block */ }
+    
+    h1, h2, h3, h4, h5, h6 { /* headline, if available */ }
+    
+    div.list_search { /* search, if available */ }
+        form {
+            div.formbody {
+                lable.invisible { /* label for screen readers,  invisible  */ }
+                select.select { /* field to search in */ 
+                    option { }
+                }
+                input {
+                    &.text { /* search term input */ }
+                    &.submit { /* submit button */ }
+                }
+            }
+        }
+    }
+    
+    div.list_per_page { /* item per page setting, if available */ }
+        form {
+            div.formbody {
+                lable.invisible { /* label for screen readers,  invisible  */ }
+                select.select { /* items per page selection */ 
+                    option { }
+                }
+                input.submit { /* submit button */ }
+            }
+        }
+    }
+    
+    table.all_records { /* all found items */ }
+        thead {
+            tr {
+                th.head {
+                    &.col_first { /* first column */ }
+                    &.col_last { /* last column */ }
+                    &.col_even { /* even column number */ }
+                    &.col_odd { /* odd column number */ }
+                    &.col_? { /* column number, starting from 0 */ }
+                    
+                    a { /* sort by this column */ }
+                }
+            }
+        }
+                    
+        tbody {
+            tr.body {
+                &.row_first { /* first row */ }
+                &.row_last { /* last row */ }
+                &.row_even { /* even row number */ }
+                &.row_odd { /* odd row number */ }
+                &.row_? { /* row number, starting from 0 */ }
+                
+                td.body {
+                    &.col_first { /* first column */ }
+                    &.col_last { /* last column */ }
+                    &.col_even { /* even column number */ }
+                    &.col_odd { /* odd column number */ }
+                    &.col_? { /* column number, starting from 0 */ }
+                    
+                    a img { /* link to details, if available */ }
+                }
+            }
+        }
+    }
+    
+    /* TODO */
+    .pagination()
+}
+
