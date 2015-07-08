@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+
+      <meta charset="utf-8">
+    <title>Formular - Contao Test Webseite</title>
+    <!--<base href="http://localhost:8888/">-->
+
+          <meta name="robots" content="index,follow">
+      <meta name="description" content="">
+      <meta name="keywords" content="">
+      <meta name="generator" content="Contao Open Source CMS">
+    
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <style>#wrapper{width:100%;margin:0 auto 0 0}#header{height:100px}#left{width:20%;right:20%}#right{width:40%}#container{padding-left:20%;padding-right:40%}</style>
+    <link rel="stylesheet" href="../assets/css/b9e5772fe450.css">
+        <script src="../assets/js/1153ae2a5668.js"></script>
+
+          <!--[if lt IE 9]><script src="../assets/html5shiv/3.7.2/html5shiv-printshiv.min.js"></script><![endif]-->
+      
+</head>
+<body id="top" class="unknown other ">
+
+      
+    <div id="wrapper">
+
+                    
+      
+              <div id="container">
+
+                      <div id="main">
+              <div class="inside">
+                
+<!-- indexer::stop -->
+<div class="mod_form tableless block">
+
+      <h1>Formular mit Überschrift</h1>
+  
+  <form action="index.php/formular.html" id="f3" method="post" enctype="multipart/form-data">
+    <div class="formbody">
+              <input type="hidden" name="FORM_SUBMIT" value="auto_form_3">
+        <input type="hidden" name="REQUEST_TOKEN" value="c2cbc33a8525489a2c7a89b6661b8932">
+                  <input type="hidden" name="MAX_FILE_SIZE" value="2048000">
+                    
+<input type="hidden" name="This_is_hidden" value="1">
+              
+
+  <div class="widget widget-headline headline">
+    <p>Überschrift?</p>  </div>
+
+
+
+  <div class="widget widget-explanation explanation">
+    <p>Erklärung?</p>  </div>
+
+
+<p>Hash De Em El</p>
+
+  <div class="widget widget-text">
+          <label for="ctrl_25">
+              Textfeldlabel          </label>
+  
+      
+  <input type="text" name="Textfeld" id="ctrl_25" class="text" value="">
+
+    </div>
+
+
+
+  <div class="widget widget-text mandatory">
+          <label for="ctrl_26" class="mandatory">
+              <span class="invisible">Pflichtfeld</span> Textfeldlabel für Pflichtfeld<span class="mandatory">*</span>
+          </label>
+  
+      
+  <input type="text" name="Textfeld,_Pflichtfeld" id="ctrl_26" class="text mandatory" value="" required>
+
+    </div>
+
+
+
+  <div class="widget widget-password">
+          <label for="ctrl_27">
+              Passwortfeld          </label>
+  
+      
+  <input type="password" name="passwort" id="ctrl_27" class="text password" value="">
+
+    </div>
+
+  <div class="widget widget-password confirm">
+          <label for="ctrl_27_confirm" class="confirm">
+              Bestätigung          </label>
+  
+      <input type="password" name="passwort_confirm" id="ctrl_27_confirm" class="text password" value="">
+  </div>
+
+
+
+  <div class="widget widget-textarea">
+          <label for="ctrl_28">
+              Freitext!          </label>
+  
+      
+  <textarea name="txt" id="ctrl_28" class="textarea" rows="4" cols="40"></textarea>
+
+    </div>
+
+
+
+  <div class="widget widget-select select">
+          <label for="ctrl_29" class="select">
+              Select, Einfachauswahl, ohne Gruppen          </label>
+  
+      
+  <select name="Select" id="ctrl_29" class="select">
+          
+              <option value="1" selected>eins</option>
+      
+                
+              <option value="2" selected>zwei</option>
+      
+                
+              <option value="3" selected>drei</option>
+      
+                
+              <option value="4" selected>vier</option>
+      
+            </select>
+
+    </div>
+
+
+
+  <div class="widget widget-select select">
+          <label for="ctrl_30" class="select">
+              Select, Einfachauswahl, mit Gruppen          </label>
+  
+      
+  <select name="Select_Gruppe" id="ctrl_30" class="select">
+                  <optgroup label="eins">
+      
+      
+                
+              <option value="2" selected>zwei</option>
+      
+                
+      
+              </optgroup>
+                        <optgroup label="drei">
+      
+      
+                
+              <option value="4" selected>vier</option>
+      
+                
+      
+              </optgroup>
+            </select>
+
+    </div>
+
+
+
+  <div class="widget widget-select multiselect">
+          <label for="ctrl_31" class="multiselect">
+              Select, mehrfachauswahl, ohne Gruppen          </label>
+  
+      
+  <select name="Select,_mutiball[]" id="ctrl_31" class="multiselect" multiple size="0">
+          
+              <option value="1" selected>eins</option>
+      
+                
+              <option value="2" selected>zwei</option>
+      
+                
+              <option value="3" selected>drei</option>
+      
+                
+              <option value="4" selected>vier</option>
+      
+            </select>
+
+    </div>
+
+
+
+  <div class="widget widget-select multiselect">
+          <label for="ctrl_32" class="multiselect">
+              Select, mehrfachauswahl, mit Gruppen          </label>
+  
+      
+  <select name="Select,_mutiball_Gruppe[]" id="ctrl_32" class="multiselect" multiple size="0">
+          
+              <option value="1" selected>eins</option>
+      
+                        <optgroup label="zwei">
+      
+      
+                
+      
+              </optgroup>
+                        <optgroup label="drei">
+      
+      
+                
+              <option value="4" selected>vier</option>
+      
+                
+      
+              </optgroup>
+            </select>
+
+    </div>
+
+
+
+  <div class="widget widget-radio">
+        
+      <fieldset id="ctrl_33" class="radio_container">
+
+          <legend>
+                  Radiobuttons ohne Gruppen              </legend>
+    
+    
+          <span><input type="radio" name="radio" id="opt_33_0" class="radio" value="1" checked> <label id="lbl_33_0" for="opt_33_0">eins</label></span>
+          <span><input type="radio" name="radio" id="opt_33_1" class="radio" value="2" checked> <label id="lbl_33_1" for="opt_33_1">zwei</label></span>
+          <span><input type="radio" name="radio" id="opt_33_2" class="radio" value="3" checked> <label id="lbl_33_2" for="opt_33_2">drei</label></span>
+          <span><input type="radio" name="radio" id="opt_33_3" class="radio" value="4" checked> <label id="lbl_33_3" for="opt_33_3">vier</label></span>
+    
+  </fieldset>
+
+    </div>
+
+
+
+  <div class="widget widget-radio">
+        
+      <fieldset id="ctrl_34" class="radio_container">
+
+          <legend>
+                  Radiobuttons mit Gruppen              </legend>
+    
+    
+          <span><input type="radio" name="radio2" id="opt_34_0" class="radio" value="1" checked> <label id="lbl_34_0" for="opt_34_0">eins</label></span>
+          <span><input type="radio" name="radio2" id="opt_34_1" class="radio" value="2" checked> <label id="lbl_34_1" for="opt_34_1">zwei</label></span>
+          <span><input type="radio" name="radio2" id="opt_34_2" class="radio" value="3" checked> <label id="lbl_34_2" for="opt_34_2">drei</label></span>
+          <span><input type="radio" name="radio2" id="opt_34_3" class="radio" value="4" checked> <label id="lbl_34_3" for="opt_34_3">vier</label></span>
+    
+  </fieldset>
+
+    </div>
+
+
+
+  <div class="widget widget-checkbox">
+        
+      <fieldset id="ctrl_35" class="checkbox_container">
+
+          <legend>
+                  Check Box mit Gruppen              </legend>
+    
+    
+    <input type="hidden" name="chk2" value="">
+
+          <span><input type="checkbox" name="chk2[]" id="opt_35_0" class="checkbox" value="1"> <label id="lbl_35_0" for="opt_35_0">eins</label></span>
+          <span><input type="checkbox" name="chk2[]" id="opt_35_1" class="checkbox" value="2"> <label id="lbl_35_1" for="opt_35_1">zwei</label></span>
+          <span><input type="checkbox" name="chk2[]" id="opt_35_2" class="checkbox" value="3"> <label id="lbl_35_2" for="opt_35_2">drei</label></span>
+          <span><input type="checkbox" name="chk2[]" id="opt_35_3" class="checkbox" value="4"> <label id="lbl_35_3" for="opt_35_3">vier</label></span>
+          <span><input type="checkbox" name="chk2[]" id="opt_35_4" class="checkbox" value="5"> <label id="lbl_35_4" for="opt_35_4">fünf</label></span>
+    
+  </fieldset>
+
+    </div>
+
+
+
+  <div class="widget widget-checkbox">
+        
+      <fieldset id="ctrl_36" class="checkbox_container">
+
+          <legend>
+                  Check Box ohne Gruppen              </legend>
+    
+    
+    <input type="hidden" name="chk1" value="">
+
+          <span><input type="checkbox" name="chk1[]" id="opt_36_0" class="checkbox" value="1"> <label id="lbl_36_0" for="opt_36_0">eins</label></span>
+          <span><input type="checkbox" name="chk1[]" id="opt_36_1" class="checkbox" value="2"> <label id="lbl_36_1" for="opt_36_1">zwei</label></span>
+          <span><input type="checkbox" name="chk1[]" id="opt_36_2" class="checkbox" value="3"> <label id="lbl_36_2" for="opt_36_2">drei</label></span>
+          <span><input type="checkbox" name="chk1[]" id="opt_36_3" class="checkbox" value="4"> <label id="lbl_36_3" for="opt_36_3">vier</label></span>
+          <span><input type="checkbox" name="chk1[]" id="opt_36_4" class="checkbox" value="5"> <label id="lbl_36_4" for="opt_36_4">fünf</label></span>
+    
+  </fieldset>
+
+    </div>
+
+
+
+  <div class="widget widget-upload">
+          <label for="ctrl_37">
+              Datei-Upload          </label>
+  
+      
+  <input type="file" name="upload" id="ctrl_37" class="upload">
+
+    </div>
+
+
+
+  <div class="widget widget-captcha mandatory">
+          <label for="ctrl_39">
+      <span class="invisible">Pflichtfeld</span> Sicherheitsabfrage<span class="mandatory">*</span>
+    </label>
+  
+      
+  <input type="text" name="c039957533e4b33df829af7687320e334" id="ctrl_39" class="captcha mandatory" value="" placeholder="dies mal mit Platzhalter" maxlength="2" required>
+  <span class="captcha_text">&#66;&#105;&#116;&#116;&#101;&#32;&#114;&#101;&#99;&#104;&#110;&#101;&#110;&#32;&#83;&#105;&#101;&#32;&#54;&#32;&#112;&#108;&#117;&#115;&#32;&#54;&#46;</span>
+
+    </div>
+
+
+  <div class="submit_container">
+                  <input type="submit" id="ctrl_40" class="submit" value="Return to Sender">
+            </div>
+
+          </div>
+  </form>
+
+</div>
+<!-- indexer::continue -->
+              </div>
+                          </div>
+          
+                                    <aside id="left">
+                <div class="inside">
+                  
+<!-- indexer::stop -->
+<nav class="mod_navigation block">
+
+  
+  <a href="formular.html#skipNavigation3" class="invisible">Navigation überspringen</a>
+
+  
+<ul class="level_1" role="menubar">
+            <li class="submenu trail first"><a href="module-in-templates.html" title="Module in Templates" class="submenu trail first" role="menuitem" aria-haspopup="true">Module in Templates</a>
+<ul class="level_2" role="menu">
+            <li class="submenu first"><a href="Navigation.html" title="Navigation" class="submenu first" role="menuitem" aria-haspopup="true">Navigation</a>
+<ul class="level_3" role="menu">
+            <li class="first"><a href="buchnavigation.html" title="Buchnavigation" class="first" role="menuitem">Buchnavigation</a></li>
+                <li><a href="individuelle-navigation.html" title="Individuelle Navigation" role="menuitem">Individuelle Navigation</a></li>
+                <li><a href="navigationsmenue.html" title="Navigationsmenü" role="menuitem">Navigationsmenü</a></li>
+                <li><a href="navigationspfad.html" title="Navigationspfad" role="menuitem">Navigationspfad</a></li>
+                <li><a href="quicknavigation-mit-bez.html" title="Quicknavigation mit Bez." role="menuitem">Quicknavigation mit Bez.</a></li>
+                <li><a href="quicknavigation-ohne-bez.html" title="Quicknavigation ohne Bez." role="menuitem">Quicknavigation ohne Bez.</a></li>
+                <li><a href="quicklink.html" title="Quicklink" role="menuitem">Quicklink</a></li>
+                <li class="last"><a href="sitemap.html" title="Sitemap" class="last" role="menuitem">Sitemap</a></li>
+      </ul>
+</li>
+                <li class="submenu"><a href="artikel.html" title="Artikel" class="submenu" role="menuitem" aria-haspopup="true">Artikel</a>
+<ul class="level_3" role="menu">
+            <li class="first"><a href="artikelliste.html" title="Artikelliste" class="first" role="menuitem">Artikelliste</a></li>
+                <li><a href="artikelnavigation-kein-1-element.html" title="Artikelnavigation kein 1. Element" role="menuitem">Artikelnavigation kein 1. Element</a></li>
+                <li class="last"><a href="artikelnavigation-1-element.html" title="Artikelnavigation 1. Element" class="last" role="menuitem">Artikelnavigation 1. Element</a></li>
+      </ul>
+</li>
+                <li class="submenu"><a href="events.html" title="Events" class="submenu" role="menuitem" aria-haspopup="true">Events</a>
+<ul class="level_3" role="menu">
+            <li class="first"><a href="kalender-keine-verkuerzung.html" title="Kalender, keine Verkürzung" class="first" role="menuitem">Kalender, keine Verkürzung</a></li>
+                <li><a href="kalender-verkuerzung.html" title="Kalender, Verkürzung" role="menuitem">Kalender, Verkürzung</a></li>
+                <li><a href="eventleser.html" title="Eventleser" role="menuitem">Eventleser</a></li>
+                <li><a href="eventliste-keine-verkuerzung.html" title="Eventliste, keine Verkürzung" role="menuitem">Eventliste, keine Verkürzung</a></li>
+                <li><a href="eventliste-verkuerzung.html" title="Eventliste, Verkürzung" role="menuitem">Eventliste, Verkürzung</a></li>
+                <li><a href="eventliste-menue-keine-verkuerzung.html" title="Eventliste-Menü, keine Verkürzung" role="menuitem">Eventliste-Menü, keine Verkürzung</a></li>
+                <li class="last"><a href="eventliste-menue-verkuerzung.html" title="Eventliste-Menü, Verkürzung" class="last" role="menuitem">Eventliste-Menü, Verkürzung</a></li>
+      </ul>
+</li>
+                <li class="submenu"><a href="faq.html" title="FAQ" class="submenu" role="menuitem" aria-haspopup="true">FAQ</a>
+<ul class="level_3" role="menu">
+            <li class="first"><a href="faq-leser.html" title="FAQ-Leser" class="first" role="menuitem">FAQ-Leser</a></li>
+                <li><a href="faq-liste.html" title="FAQ-Liste" role="menuitem">FAQ-Liste</a></li>
+                <li class="last"><a href="faq-seite.html" title="FAQ-Seite" class="last" role="menuitem">FAQ-Seite</a></li>
+      </ul>
+</li>
+                <li class="submenu"><a href="nachrichten.html" title="Nachrichten" class="submenu" role="menuitem" aria-haspopup="true">Nachrichten</a>
+<ul class="level_3" role="menu">
+            <li class="first"><a href="nachrichtenarchiv-menue.html" title="Nachrichtenarchiv-Menü" class="first" role="menuitem">Nachrichtenarchiv-Menü</a></li>
+                <li><a href="nachrichtenleser.html" title="Nachrichtenleser" role="menuitem">Nachrichtenleser</a></li>
+                <li><a href="nachrichtenliste.html" title="Nachrichtenliste" role="menuitem">Nachrichtenliste</a></li>
+                <li class="last"><a href="nachrichten-achiv.html" title="Nachrichten-Achiv" class="last" role="menuitem">Nachrichten-Achiv</a></li>
+      </ul>
+</li>
+                <li class="submenu"><a href="newsletter.html" title="Newsletter" class="submenu" role="menuitem" aria-haspopup="true">Newsletter</a>
+<ul class="level_3" role="menu">
+            <li class="first"><a href="newsletter-abonnieren.html" title="Newsletter abonnieren" class="first" role="menuitem">Newsletter abonnieren</a></li>
+                <li><a href="newsletter-kuendigen.html" title="Newsletter kündigen" role="menuitem">Newsletter kündigen</a></li>
+                <li><a href="newsletterleser.html" title="Newsletterleser" role="menuitem">Newsletterleser</a></li>
+                <li class="last"><a href="newsletterliste.html" title="Newsletterliste" class="last" role="menuitem">Newsletterliste</a></li>
+      </ul>
+</li>
+                <li class="submenu"><a href="benutzer.html" title="Benutzer" class="submenu" role="menuitem" aria-haspopup="true">Benutzer</a>
+<ul class="level_3" role="menu">
+            <li class="first"><a href="automatischer-logout.html" title="Automatischer Logout" class="first" role="menuitem">Automatischer Logout</a></li>
+                <li><a href="konto-schliessen.html" title="Konto Schließen" role="menuitem">Konto Schließen</a></li>
+                <li><a href="login-formular.html" title="Login Formular" role="menuitem">Login Formular</a></li>
+                <li><a href="passwort-aendern.html" title="Passwort ändern" role="menuitem">Passwort ändern</a></li>
+                <li><a href="passwort-vergessen.html" title="Passwort vergessen" role="menuitem">Passwort vergessen</a></li>
+                <li><a href="personendaten.html" title="Personendaten" role="menuitem">Personendaten</a></li>
+                <li class="last"><a href="registrierung.html" title="Registrierung" class="last" role="menuitem">Registrierung</a></li>
+      </ul>
+</li>
+                <li class="submenu trail last"><a href="sonstiges.html" title="Sonstiges" class="submenu trail last" role="menuitem" aria-haspopup="true">Sonstiges</a>
+<ul class="level_3" role="menu">
+            <li class="sibling first"><a href="eigenes-html.html" title="Eigenes HTML" class="sibling first" role="menuitem">Eigenes HTML</a></li>
+                <li class="active"><span class="active" role="menuitem">Formular</span></li>
+                <li class="sibling"><a href="kommentare.html" title="Kommentare" class="sibling" role="menuitem">Kommentare</a></li>
+                <li class="sibling"><a href="suchmaschine.html" title="Suchmaschine" class="sibling" role="menuitem">Suchmaschine</a></li>
+                <li class="sibling last"><a href="zufallsbild.html" title="Zufallsbild" class="sibling last" role="menuitem">Zufallsbild</a></li>
+      </ul>
+</li>
+      </ul>
+</li>
+                <li class="submenu last"><a href="module-eingebettet.html" title="Module Eingebettet" class="submenu last" role="menuitem" aria-haspopup="true">Module Eingebettet</a>
+<ul class="level_2" role="menu">
+            <li class="first last"><a href="modul-unterseite.html" title="Modul unterseite" class="first last" role="menuitem">Modul unterseite</a></li>
+      </ul>
+</li>
+      </ul>
+
+  <a id="skipNavigation3" class="invisible">&nbsp;</a>
+
+</nav>
+<!-- indexer::continue -->
+                </div>
+              </aside>
+                      
+                                    <aside id="right">
+                <div class="inside">
+                  
+<!-- indexer::stop -->
+<div class="mod_form tableform block">
+
+  
+  <form action="index.php/formular.html" id="f1" method="post" enctype="multipart/form-data">
+    <div class="formbody">
+              <input type="hidden" name="FORM_SUBMIT" value="auto_form_1">
+        <input type="hidden" name="REQUEST_TOKEN" value="c2cbc33a8525489a2c7a89b6661b8932">
+                  <input type="hidden" name="MAX_FILE_SIZE" value="2048000">
+                    
+<input type="hidden" name="This_is_hidden" value="1">
+              <table>
+          
+
+  <tr class="row_0 row_first even">
+    <td colspan="2" class="colspan headline"><p>Überschrift?</p></td>
+  </tr>
+
+
+
+  <tr class="row_1 odd">
+    <td colspan="2" class="colspan explanation"><p>Erklärung?</p></td>
+  </tr>
+
+
+<p>Hash De Em El</p>
+
+  <tr class="row_3 odd">
+    <td class="col_0 col_first">
+            <label for="ctrl_4">
+              Textfeldlabel          </label>
+      </td>
+    <td class="col_1 col_last">
+        
+  <input type="text" name="Textfeld" id="ctrl_4" class="text" value="">
+
+      </td>
+  </tr>
+
+
+
+  <tr class="row_4 even">
+    <td class="col_0 col_first">
+            <label for="ctrl_5" class="mandatory">
+              <span class="invisible">Pflichtfeld</span> Textfeldlabel für Pflichtfeld<span class="mandatory">*</span>
+          </label>
+      </td>
+    <td class="col_1 col_last">
+        
+  <input type="text" name="Textfeld,_Pflichtfeld" id="ctrl_5" class="text mandatory" value="" required>
+
+      </td>
+  </tr>
+
+
+
+  <tr class="row_5 odd">
+    <td class="col_0 col_first">
+            <label for="ctrl_6">
+              Passwortfeld          </label>
+      </td>
+    <td class="col_1 col_last">
+        
+  <input type="password" name="passwort" id="ctrl_6" class="text password" value="">
+
+      </td>
+  </tr>
+  <tr class="row_6 even">
+    <td class="col_0 col_first">
+            <label for="ctrl_6_confirm" class="confirm">
+              Bestätigung          </label>
+      </td>
+    <td class="col_1 col_last">
+        <input type="password" name="passwort_confirm" id="ctrl_6_confirm" class="text password" value="">
+    </td>
+  </tr>
+
+
+
+  <tr class="row_7 odd">
+    <td class="col_0 col_first">
+            <label for="ctrl_7">
+              Freitext!          </label>
+      </td>
+    <td class="col_1 col_last">
+        
+  <textarea name="txt" id="ctrl_7" class="textarea" rows="4" cols="40"></textarea>
+
+      </td>
+  </tr>
+
+
+
+  <tr class="row_8 even">
+    <td class="col_0 col_first">
+            <label for="ctrl_8" class="select">
+              Select, Einfachauswahl, ohne Gruppen          </label>
+      </td>
+    <td class="col_1 col_last">
+        
+  <select name="Select" id="ctrl_8" class="select">
+          
+              <option value="1" selected>eins</option>
+      
+                
+              <option value="2" selected>zwei</option>
+      
+                
+              <option value="3" selected>drei</option>
+      
+                
+              <option value="4" selected>vier</option>
+      
+            </select>
+
+      </td>
+  </tr>
+
+
+
+  <tr class="row_9 odd">
+    <td class="col_0 col_first">
+            <label for="ctrl_11" class="select">
+              Select, Einfachauswahl, mit Gruppen          </label>
+      </td>
+    <td class="col_1 col_last">
+        
+  <select name="Select_Gruppe" id="ctrl_11" class="select">
+                  <optgroup label="eins">
+      
+      
+                
+              <option value="2" selected>zwei</option>
+      
+                
+      
+              </optgroup>
+                        <optgroup label="drei">
+      
+      
+                
+              <option value="4" selected>vier</option>
+      
+                
+      
+              </optgroup>
+            </select>
+
+      </td>
+  </tr>
+
+
+
+  <tr class="row_10 even">
+    <td class="col_0 col_first">
+            <label for="ctrl_9" class="multiselect">
+              Select, mehrfachauswahl, ohne Gruppen          </label>
+      </td>
+    <td class="col_1 col_last">
+        
+  <select name="Select,_mutiball[]" id="ctrl_9" class="multiselect" multiple size="0">
+          
+              <option value="1" selected>eins</option>
+      
+                
+              <option value="2" selected>zwei</option>
+      
+                
+              <option value="3" selected>drei</option>
+      
+                
+              <option value="4" selected>vier</option>
+      
+            </select>
+
+      </td>
+  </tr>
+
+
+
+  <tr class="row_11 odd">
+    <td class="col_0 col_first">
+            <label for="ctrl_12" class="multiselect">
+              Select, mehrfachauswahl, mit Gruppen          </label>
+      </td>
+    <td class="col_1 col_last">
+        
+  <select name="Select,_mutiball_Gruppe[]" id="ctrl_12" class="multiselect" multiple size="0">
+          
+              <option value="1" selected>eins</option>
+      
+                        <optgroup label="zwei">
+      
+      
+                
+      
+              </optgroup>
+                        <optgroup label="drei">
+      
+      
+                
+              <option value="4" selected>vier</option>
+      
+                
+      
+              </optgroup>
+            </select>
+
+      </td>
+  </tr>
+
+
+
+  <tr class="row_12 even">
+    <td class="col_0 col_first">
+              &nbsp;
+          </td>
+    <td class="col_1 col_last">
+        <fieldset id="ctrl_13" class="radio_container">
+
+          <legend>
+                  Radiobuttons ohne Gruppen              </legend>
+    
+    
+          <span><input type="radio" name="radio" id="opt_13_0" class="radio" value="1" checked> <label id="lbl_13_0" for="opt_13_0">eins</label></span>
+          <span><input type="radio" name="radio" id="opt_13_1" class="radio" value="2" checked> <label id="lbl_13_1" for="opt_13_1">zwei</label></span>
+          <span><input type="radio" name="radio" id="opt_13_2" class="radio" value="3" checked> <label id="lbl_13_2" for="opt_13_2">drei</label></span>
+          <span><input type="radio" name="radio" id="opt_13_3" class="radio" value="4" checked> <label id="lbl_13_3" for="opt_13_3">vier</label></span>
+    
+  </fieldset>
+
+      </td>
+  </tr>
+
+
+
+  <tr class="row_13 odd">
+    <td class="col_0 col_first">
+              &nbsp;
+          </td>
+    <td class="col_1 col_last">
+        <fieldset id="ctrl_15" class="radio_container">
+
+          <legend>
+                  Radiobuttons mit Gruppen              </legend>
+    
+    
+          <span><input type="radio" name="radio2" id="opt_15_0" class="radio" value="1" checked> <label id="lbl_15_0" for="opt_15_0">eins</label></span>
+          <span><input type="radio" name="radio2" id="opt_15_1" class="radio" value="2" checked> <label id="lbl_15_1" for="opt_15_1">zwei</label></span>
+          <span><input type="radio" name="radio2" id="opt_15_2" class="radio" value="3" checked> <label id="lbl_15_2" for="opt_15_2">drei</label></span>
+          <span><input type="radio" name="radio2" id="opt_15_3" class="radio" value="4" checked> <label id="lbl_15_3" for="opt_15_3">vier</label></span>
+    
+  </fieldset>
+
+      </td>
+  </tr>
+
+
+
+  <tr class="row_14 even">
+    <td class="col_0 col_first">
+              &nbsp;
+          </td>
+    <td class="col_1 col_last">
+        <fieldset id="ctrl_16" class="checkbox_container">
+
+          <legend>
+                  Check Box mit Gruppen              </legend>
+    
+    
+    <input type="hidden" name="chk2" value="">
+
+          <span><input type="checkbox" name="chk2[]" id="opt_16_0" class="checkbox" value="1"> <label id="lbl_16_0" for="opt_16_0">eins</label></span>
+          <span><input type="checkbox" name="chk2[]" id="opt_16_1" class="checkbox" value="2"> <label id="lbl_16_1" for="opt_16_1">zwei</label></span>
+          <span><input type="checkbox" name="chk2[]" id="opt_16_2" class="checkbox" value="3"> <label id="lbl_16_2" for="opt_16_2">drei</label></span>
+          <span><input type="checkbox" name="chk2[]" id="opt_16_3" class="checkbox" value="4"> <label id="lbl_16_3" for="opt_16_3">vier</label></span>
+          <span><input type="checkbox" name="chk2[]" id="opt_16_4" class="checkbox" value="5"> <label id="lbl_16_4" for="opt_16_4">fünf</label></span>
+    
+  </fieldset>
+
+      </td>
+  </tr>
+
+
+
+  <tr class="row_15 odd">
+    <td class="col_0 col_first">
+              &nbsp;
+          </td>
+    <td class="col_1 col_last">
+        <fieldset id="ctrl_17" class="checkbox_container">
+
+          <legend>
+                  Check Box ohne Gruppen              </legend>
+    
+    
+    <input type="hidden" name="chk1" value="">
+
+          <span><input type="checkbox" name="chk1[]" id="opt_17_0" class="checkbox" value="1"> <label id="lbl_17_0" for="opt_17_0">eins</label></span>
+          <span><input type="checkbox" name="chk1[]" id="opt_17_1" class="checkbox" value="2"> <label id="lbl_17_1" for="opt_17_1">zwei</label></span>
+          <span><input type="checkbox" name="chk1[]" id="opt_17_2" class="checkbox" value="3"> <label id="lbl_17_2" for="opt_17_2">drei</label></span>
+          <span><input type="checkbox" name="chk1[]" id="opt_17_3" class="checkbox" value="4"> <label id="lbl_17_3" for="opt_17_3">vier</label></span>
+          <span><input type="checkbox" name="chk1[]" id="opt_17_4" class="checkbox" value="5"> <label id="lbl_17_4" for="opt_17_4">fünf</label></span>
+    
+  </fieldset>
+
+      </td>
+  </tr>
+
+
+
+  <tr class="row_16 even">
+    <td class="col_0 col_first">
+            <label for="ctrl_18">
+              Datei-Upload          </label>
+      </td>
+    <td class="col_1 col_last">
+        
+  <input type="file" name="upload" id="ctrl_18" class="upload">
+
+      </td>
+  </tr>
+
+
+
+  <tr class="row_17 odd">
+    <td class="col_0 col_first">
+            <label for="ctrl_20">
+      <span class="invisible">Pflichtfeld</span> Sicherheitsabfrage<span class="mandatory">*</span>
+    </label>
+      </td>
+    <td class="col_1 col_last">
+        
+  <input type="text" name="c4b55c3b213c1e6f81743e73dd3706559" id="ctrl_20" class="captcha mandatory" value="" placeholder="dies mal mit Platzhalter" maxlength="2" required>
+  <span class="captcha_text">&#87;&#97;&#115;&#32;&#105;&#115;&#116;&#32;&#100;&#105;&#101;&#32;&#83;&#117;&#109;&#109;&#101;&#32;&#97;&#117;&#115;&#32;&#50;&#32;&#117;&#110;&#100;&#32;&#56;&#63;</span>
+
+      </td>
+  </tr>
+
+
+  <tr class="row_18 row_last even">
+    <td class="col_0 col_first">&nbsp;</td>
+    <td class="col_1 col_last">
+      <div class="submit_container">
+                              <input type="submit" id="ctrl_21" class="submit" value="Return to Sender">
+                        </div>
+    </td>
+  </tr>
+
+        </table>
+          </div>
+  </form>
+
+</div>
+<!-- indexer::continue -->
+                </div>
+              </aside>
+                      
+        </div>
+      
+      
+                    
+    </div>
+
+      
+  
+<script src="../assets/jquery/ui/1.11.4/jquery-ui.min.js"></script>
+<script>
+  (function($) {
+    $(document).ready(function() {
+      $(document).accordion({
+        // Put custom options here
+        heightStyle: 'content',
+        header: 'div.toggler',
+        collapsible: true,
+        create: function(event, ui) {
+          ui.header.addClass('active');
+        },
+        activate: function(event, ui) {
+          ui.newHeader.addClass('active');
+          ui.oldHeader.removeClass('active');
+        }
+      });
+    });
+  })(jQuery);
+</script>
+
+<script src="../assets/jquery/colorbox/1.6.1/js/colorbox.min.js"></script>
+<script>
+  (function($) {
+    $(document).ready(function() {
+      $('a[data-lightbox]').map(function() {
+        $(this).colorbox({
+          // Put custom options here
+          loop: false,
+          rel: $(this).attr('data-lightbox'),
+          maxWidth: '95%',
+          maxHeight: '95%'
+        });
+      });
+    });
+  })(jQuery);
+</script>
+
+<script src="../assets/jquery/mediaelement/2.16.4/js/mediaelement-and-player.min.js"></script>
+<script>
+  (function($) {
+    $(document).ready(function() {
+      $('video,audio').mediaelementplayer({
+        // Put custom options here
+        pluginPath: '/assets/jquery/mediaelement/2.16.4/',
+        flashName: 'legacy/flashmediaelement.swf',
+        silverlightName: 'legacy/silverlightmediaelement.xap'
+      });
+    });
+  })(jQuery);
+</script>
+
+<script src="../assets/swipe/2.0/js/swipe.min.js"></script>
+<script>
+  (function($) {
+    $(document).ready(function() {
+      $('.ce_sliderStart').each(function(i, cte) {
+        var s = $('.content-slider', cte)[0],
+            c = s.getAttribute('data-config').split(',');
+        new Swipe(s, {
+          // Put custom options here
+          'auto': parseInt(c[0]),
+          'speed': parseInt(c[1]),
+          'startSlide': parseInt(c[2]),
+          'continuous': parseInt(c[3]),
+          'menu': $('.slider-control', cte)[0]
+        });
+      });
+    });
+  })(jQuery);
+</script>
+
+<script src="../assets/jquery/tablesorter/2.0.5/js/tablesorter.js"></script>
+<script>
+  (function($) {
+    $(document).ready(function() {
+      $('.ce_table .sortable').each(function(i, table) {
+        $(table).tablesorter();
+      });
+    });
+  })(jQuery);
+</script>
+
+<script>setTimeout(function(){var e=function(e,t){try{var n=new XMLHttpRequest}catch(r){return}n.open("GET",e,!0),n.onreadystatechange=function(){this.readyState==4&&this.status==200&&typeof t=="function"&&t(this.responseText)},n.send()},t="system/cron/cron.";e(t+"txt",function(n){parseInt(n||0)<Math.round(+(new Date)/1e3)-86400&&e(t+"php")})},5e3);</script>
+
+</body>
+</html>
