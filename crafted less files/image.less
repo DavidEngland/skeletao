@@ -1,0 +1,32 @@
+ /*  less stylesheets for contao
+
+    derived from:
+        /system/modules/core/templates/picture/picture_default.html5
+
+    pictures come in two different kinds: normal img tags or a picture tag for
+    responsive images with different sources
+*/
+
+
+.image() {
+    img { /* standard image */ }
+
+    picture { /* responsive images */
+        source { }
+        img { }
+    }
+}
+
+.image_container() {
+
+    figure.image_container {
+        a { /* link with text, if available */ }
+
+        /* TODO */
+        .image()
+
+        figcaption.caption { /* caption, if available */ }
+    }
+
+}
+
