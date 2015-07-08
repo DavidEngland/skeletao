@@ -8,12 +8,26 @@
         - no information about total pages
         - uses li.link and a.link for "normal" links, just ignore it and define
           a default styling for .pagination li and .pagination a
+
+    structure:
+        <div.pagination>
+            <p> Page 4 of 7
+            <ul>
+                <li.first>
+                    <a.first> 1
+                <li.previous>
+                    <a.previous> 3
+                <li.current>
+                    <span.current> 4
+                <li.next>
+                    <a.next> 5
+                <li.last>
+                    <a.last> 7
 */
 
-.pagination {
-    &.block { /* it is also a block */ }
+.pagination { /* other classes used: .block */
 
-    p { /* total pages, not in mod_article_nav */ }
+    p { /* 'page x of y', not in mod_article_nav */ }
 
     ul {
         li {
