@@ -1,0 +1,49 @@
+ /*  less stylesheets for contao
+
+    derived from:
+        /system/modules/news/templates/news/news_full.html5
+        /system/modules/news/templates/news/news_latest.html5
+        /system/modules/news/templates/news/news_short.html5
+        /system/modules/news/templates/news/news_simple.html5
+        /system/modules/news/modules/ModuleNews.html5
+*/
+
+.news() {
+    .layout_full { /* full news layout */
+
+        h1 { /* news headline */ }
+
+        p.info { /* news meta data */
+            time { /* date news was posted */ }
+        }
+
+        h2 { /* subheadline, if available */ }
+
+        /* .ce_text { for teaser, if available } */
+        /* .enclosure { for teaser, if available } */
+    }
+
+    .layout_simple { /* simple news layout */
+
+        time { /* date news was posted, if available */ }
+
+        h1, h2, h3, h4, h5, h6 { /* headline */
+            a { /* link to headline */ }
+        }
+    }
+
+    .layout_latest, .layout_short  { /* latest news layout */
+
+        p.info { /* news meta data */
+            time { /* date news was posted */ }
+        }
+
+        h2 { /* news headline */ }
+
+        div.teaser { /* for teaser, if available */ }
+
+        /* p.more a { link to full news } */
+    }
+
+    .layout_latest { /* .image_container() */ }
+}
