@@ -1,0 +1,202 @@
+/* all content elements, in alphabetical order */
+
+/* all content elements might contain a headline */
+.ce_accordion, .ce_accordion_start, .ce_code, .ce_download, .ce_downloads,
+.ce_gallery, .ce_headline, .ce_html, .ce_hyperlink, .ce_hyperlink_image,
+.ce_image, .ce_list, .ce_markdown, .ce_player, .ce_slider_start, .ce_table,
+.ce_teaser, .ce_text, .ce_toplink { /* .headlines-mixin() */ }
+
+
+.ce_accordion {
+    &.ce_text { }
+
+    div {
+        &.toggler { /* might have a custom class name instead */ }
+        &.accordion { /* might have a custom class name instead */
+            /* .image_container() */
+        }
+    }
+}
+
+
+.ce_accordion_start.ce_accordion { }
+
+
+.ce_code {
+    pre {
+        &.brush: { }
+        .shbrushapacheconf { /* highlighting for apacheconf */ }
+        .shbrushas3 { /* highlighting for as3 */ }
+        .shbrushbash { /* highlighting for bash */ }
+        .shbrushcpp { /* highlighting for c++ */ }
+        .shbrushcsharp { /* highlighting for c# */ }
+        .shbrushcss { /* highlighting for css */ }
+        .shbrushdelphi { /* highlighting for delphi */ }
+        .shbrushdiff { /* highlighting for diff */ }
+        .shbrushgroovy { /* highlighting for groovy */ }
+        .shbrushxml { /* highlighting for xml */ }
+        .shbrushjava { /* highlighting for java */ }
+        .shbrushjavafx { /* highlighting for javafx */ }
+        .shbrushjscript { /* highlighting for javascript */ }
+        .shbrushperl { /* highlighting for perl */ }
+        .shbrushphp { /* highlighting for php */ }
+        .shbrushpowershell { /* highlighting for powershell */ }
+        .shbrushpython { /* highlighting for python */ }
+        .shbrushruby { /* highlighting for ruby */ }
+        .shbrushscala { /* highlighting for scala */ }
+        .shbrushsql { /* highlighting for sql */ }
+        .shbrushplain { /* highlighting for plain text */ }
+        .shbrushvb { /* highlighting for vb */ }
+        .shbrushxml { /* highlighting for xml or xhtml */ }
+    }
+}
+
+
+.ce_download {
+    img.mime_icon { /* mime icon */ }
+    a { /* link to file */
+        span.size { /* file size */ }
+    }
+}
+
+
+.ce_downloads {
+    ul {
+        li {
+            .ce_download()
+        }
+    }
+}
+
+
+.ce_gallery {
+    ul {
+        li {
+            &.row_first { /* first "row" in gallery */ }
+            &.row_last { /* last "row" in gallery */ }
+            &.even { /* even "row" number */  }
+            &.odd { /* odd "row" number */  }
+            /* the rows are also numbered like .row_0, .row_1, .row_2 */
+
+            &.col_first { /* first "column" in "row" */ }
+            &.col_last { /* last "column" in "row" */ }
+            /* the columns are also numbered like .col_0, .col_1, .col_2 */
+
+            /* .image_container() */
+        }
+    /* .pagination() */
+}
+
+
+.ce_headline {
+    h1&, h2&, h3&, h4&, h5& { /* they all are noted as ce_headlines */ }
+}
+
+
+.ce_html { }
+
+
+.ce_hyperlink {
+    a.hyperlink_txt { /* that was easy */ }
+}
+
+
+.ce_hyperlink_image { /* .image_container() */ }
+
+
+.ce_image { /* .image_container() */ }
+
+
+.ce_list {
+    ol, ul { /* either ordered or unordered list */
+        li { /* list elements */
+            &.first { /* first element */ }
+            &.last { /* last element */ }
+        }
+    }
+}
+
+
+.ce_markdown {
+    div { /* markdown content is placed here */ }
+}
+
+
+.ce_player {
+    video, audio { /* according to type */
+        source { /* the sources */ }
+    }
+}
+
+
+.ce_slider_start {
+    div.content-slider {
+        div.slider-wrapper {
+            /* insert slides here */
+        }
+    }
+}
+
+
+.ce_table {
+    table {
+        &.sortable { /* indicating if table is sortable */ }
+
+        caption { /* summary, if available */ }
+
+        thead { /* table header, if available */
+            tr {
+                th {
+                    &.col_first { /* first column */ }
+                    &.col_last { /* first column */ }
+                    &.unsortable { /* indicating an unsortable column */ }
+                    /* not sure: column number, .head_0, .head_1, .head_2 */
+                }
+            }
+        }
+
+        tbody {
+            tr {
+                &.row_first { /* first row */ }
+                &.row_last { /* last row */ }
+                &.even { /* even row number */ }
+                &.odd { /* odd row number */ }
+
+                td {
+                    &.col_first { /* first column */ }
+                    &.col_last { /* first column */ }
+                    /* column number: .col_0, c.ol_1, .col_2 */
+                }
+            }
+        }
+
+        tfoot { /* table footer, if available */
+            tr {
+                td {
+                    &.col_first { /* first column */ }
+                    &.col_last { /* first column */ }
+                    /* column number: .foot_0, .foot_1, .foot_2 */
+                }
+            }
+        }
+    }
+}
+
+
+.ce_teaser {
+    &.ce_text { /* it's also a text */ }
+
+    h1 { /* headline, if available */ }
+
+    /* p.more a: link to a the article, see index.less */
+}
+
+
+.ce_text { /* might contain .image_container() */ }
+
+
+.ce_toplink { /* link to top of page */}
+
+
+
+
