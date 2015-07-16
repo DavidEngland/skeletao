@@ -1,0 +1,35 @@
+ /*  less stylesheets for contao
+
+    derived from:
+        /system/modules/core/templates/modules/rss_default.html5
+        /system/modules/core/templates/modules/rss_items_only.html5
+        /system/modules/core/modules/ModuleRssReader.html5
+*/
+
+
+div.rss_default, div.rss_items_only {
+
+    .rss_default, .rss_items_only { /* feed items */
+        &.first { /* first item */ }
+        &.last { /* last item */ }
+        &.even { /* even item number */ }
+        &.odd  { /* odd item number */ }
+
+        h2 { /* link to item title */
+            a { /* link to item title */ }
+        }
+        div.description { /* description of item */ }
+    }
+}
+
+div.rss_default { /* rss_defaults has also a header */
+    div.rss_default_header {
+        h1 { /* link to feed page */
+            a { }
+        }
+        a { /*linking page image, if available */
+            img { }
+        }
+        div.description { /* description of feed */ }
+    }
+}
