@@ -34,12 +34,12 @@ header, footer, nav, section, aside, article, figure, figcaption {
 /*  Custom layout sections */
 
 .custom {
-display:block; }
+    display:block; }
 
 #container:after, .custom:after {
-content:"";
-display:table;
-clear:both; }
+    content:"";
+    display:table;
+    clear:both; }
 
 
 /*  Holy grail CSS layout
@@ -49,7 +49,7 @@ clear:both; }
     centering of content is only applied if screen size is largen than tablet
     */
 
-@media (min-width: @larger-than-phablet) {
+@media (min-width: @larger-than-tablet) {
     #main, #left, #right {
        	float: left;
        	position: relative; }
@@ -85,8 +85,8 @@ clear:both; }
 }
 
 
-@media (min-width: @larger-than-tablet) {
+@media (min-width: @larger-than-desktop) {
     #wrapper {
         width: @layout-centered-width;
-        margin: 0 auto 0 0; }
+        margin: 0 auto; }
 }
