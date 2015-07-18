@@ -1,0 +1,42 @@
+/*
+    skeletao
+    combining skeleton css boilerplate and contao styles & structrues into
+    a kind of template for new contao projects
+
+   _index.less
+   setup and imports of relevant styles
+   media queries derived from Skeleton V2.0.4 | MIT license | www.getskeleton.com
+
+   use lessc --clean-css skeletao/_index.less rendered-css/skeletao.css for production
+   */
+
+
+// import variables used throughout the less files
+@import (reference) "_vars.less";
+
+// normalize styles across browsers
+// @import (inline) "normalize.css"; // for production to generate one css file
+@import "normalize.css";
+
+// import basic styles, mostly derived from skeleton
+@import "styles.less";
+
+// import "holy grail" layout, mostly derived from contao
+@import "holy-grail-layout.less";
+
+// import basic contao styles, should be used in every contao installation
+@import "contao-basic.less";
+
+
+/*  Media Queries
+
+    Note: The best way to structure the use of media queries is to create the queries
+    near the relevant code. For example, if you wanted to change the styles for buttons
+    on small devices, paste the mobile query code up in the buttons section and style it
+    there. */
+
+@media (min-width: @larger-than-mobile) {}
+@media (min-width: @larger-than-phablet) {}
+@media (min-width: @larger-than-tablet) {}
+@media (min-width: @larger-than-desktop) {}
+@media (min-width: @larger-than-desktop-hd) {}

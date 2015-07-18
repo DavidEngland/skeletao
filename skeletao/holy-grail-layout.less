@@ -1,0 +1,91 @@
+/*
+    skeletao
+    combining skeleton css boilerplate and contao styles & structrues into
+    a kind of template for new contao projects
+
+    holy-grail-layout.less
+    setup of "holy grail layout"
+    derived from Contao 3.5.0 | LGPLv3 | www.contao.org
+    */
+
+
+// import variables throughout the less files
+@import (reference) "_vars.less";
+
+
+/*  Standardize some basic elements */
+
+body, form, figure {
+   	margin:0;
+   	padding:0; }
+
+header, footer, nav, section, aside, article, figure, figcaption {
+   	display:block; }
+
+
+/*  Fix some positioning issues */
+
+#container, .inside {
+   	position:relative;
+}
+
+
+/*  Custom layout sections */
+
+.custom {
+display:block; }
+
+#container:after, .custom:after {
+content:"";
+display:table;
+clear:both; }
+
+
+/*  Holy grail CSS layout
+
+    see http://www.alistapart.com/articles/holygrail
+    only applied if screen size is tablet or higher
+    centering of content is only applied if screen size is largen than tablet
+    */
+
+@media (min-width: @larger-than-phablet) {
+    #main, #left, #right {
+       	float: left;
+       	position: relative; }
+
+    #wrapper {
+        width: 100%; }
+
+    #header {
+        height: @layout-header-height; }
+
+    #main {
+       	width: 100%; }
+
+    #container {
+       padding-left: @layout-left-column-width;
+       padding-right: @layout-right-column-width; }
+
+    #left {
+       	margin-left: -100%;
+        width: @layout-left-column-width;
+        right: @layout-left-column-width; }
+
+    #right {
+       	margin-right: -100%;
+        width: @layout-right-column-width; }
+
+    #footer {
+       	clear: both;
+        height: @layout-footer-height; }
+
+    #main .inside {
+       	min-height:1px; }
+}
+
+
+@media (min-width: @larger-than-tablet) {
+    #wrapper {
+        width: @layout-centered-width;
+        margin: 0 auto 0 0; }
+}

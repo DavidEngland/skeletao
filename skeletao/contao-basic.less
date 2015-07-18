@@ -1,0 +1,79 @@
+/*
+    skeletao
+    combining skeleton css boilerplate and contao styles & structrues into
+    a kind of template for new contao projects
+
+    contao-basic.less
+    basic contao layouts, used for all contao installations
+    derived from Contao 3.5.0 | LGPLv3 | www.contao.org
+    */
+
+
+// import variables throughout the less files
+@import (reference) "_vars.less";
+
+
+/*  Block layout elements */
+
+.block {
+    display: block;
+    overflow:hidden; }
+
+
+/*  Float classes */
+
+.float_left {
+    float:left; }
+
+.float_right {
+    float:right; }
+
+.clear, #clear { // clear floats
+    height:0.1px;
+    font-size:0.1px;
+    line-height:0.1px;
+    clear:both; }
+
+
+/* Format the Contao image galleries, rendered as unordered lists */
+
+.ce_gallery > ul {
+    margin:0;
+    padding:0;
+    overflow:hidden;
+    list-style:none; }
+
+.ce_gallery > ul li {
+    float:left; }
+
+.ce_gallery > ul li.col_first {
+    clear:left; }
+
+
+/*  Hide invisible elements */
+
+.invisible {
+    border:0;
+    clip:rect(0 0 0 0);
+    height:1px;
+    margin:-1px;
+    overflow:hidden;
+    padding:0;
+    position:absolute;
+    width:1px; }
+
+
+/*  Flexible images
+
+    http://webdesignerwall.com/tutorials/responsive-design-with-css3-media-queries
+    */
+
+img {
+	max-width:100%;
+	height:auto; }
+
+.ie7 img {
+	-ms-interpolation-mode:bicubic; }
+
+.ie8 img {
+	width:auto; }
