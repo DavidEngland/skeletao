@@ -1,6 +1,22 @@
-/* all content elements, in alphabetical order */
+/*
+    skeletao
+    combining skeleton css boilerplate and contao styles & structrues into
+    a kind of template for new contao projects
 
-/* all content elements might contain a headline */
+    contao/*
+    these files should not be considered "ready to use". They show the structure
+    of contao output. Use it as a kind of "reminder" and inspiration for custom
+    styles.
+
+    contao/content-elements.less
+    standard contao content elements. These will be placed inside modules.
+    derived from Contao 3.5.0 | LGPLv3 | www.contao.org
+
+    use lessc --clean-css skeletao/_index.less rendered-css/skeletao.css for production
+    */
+
+
+// all content elements might contain a headline
 .ce_accordion,
 .ce_accordion_start,
 .ce_code,
@@ -24,7 +40,7 @@
 
 
 .ce_accordion {
-    &.ce_text { }
+    &.ce_text { /* this is also a text content element */ }
 
     div {
         &.toggler { /* might have a custom class name instead */ }
@@ -37,9 +53,8 @@
 
 .ce_accordion_start.ce_accordion { }
 
-.ce_comments { /* other classes used: .block .block_searchable */
 
-    /* h1 - h6 */
+.ce_comments {
     /* pagination */
     /* form widgets */
     /* form tableless */
@@ -62,6 +77,7 @@
         p.confirm { /* for an optional confirmation message (not sure ;-) */ }
     }
 }
+
 
 .ce_code {
     pre {
@@ -123,7 +139,7 @@
             &.col_last { /* last "column" in "row" */ }
             /* the columns are also numbered like .col_0, .col_1, .col_2 */
 
-            /* image container() */
+            /* image container */
         }
     }
     /* pagination */
@@ -224,12 +240,13 @@
     }
 }
 
+
 .ce_teaser {
     &.ce_text { /* it's also a text */ }
 
     h1 { /* headline, if available */ }
 
-    /* p.more a: link to a the article, see index.less */
+    /* link to "more" (p.more) */
 }
 
 
@@ -237,7 +254,3 @@
 
 
 .ce_toplink { /* link to top of page */}
-
-
-
-
