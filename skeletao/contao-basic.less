@@ -17,37 +17,41 @@
 
 .block {
     display: block;
-    overflow:hidden; }
+    overflow: hidden; }
+
+*[class*="mod_"] *[class*="mod_"] { // modules might contain other modules
+    margin:0;
+    padding:0; }
 
 
 /*  Float classes */
 
 .float_left {
-    float:left; }
+    float: left; }
 
 .float_right {
-    float:right; }
+    float: right; }
 
 .clear, #clear { // clear floats
-    height:0.1px;
-    font-size:0.1px;
-    line-height:0.1px;
-    clear:both; }
+    height: 0.1px;
+    font-size: 0.1px;
+    line-height: 0.1px;
+    clear: both; }
 
 
 /* Format the Contao image galleries, rendered as unordered lists */
 
 .ce_gallery > ul {
-    margin:0;
-    padding:0;
-    overflow:hidden;
-    list-style:none; }
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    list-style: none; }
 
 .ce_gallery > ul li {
-    float:left; }
+    float: left; }
 
 .ce_gallery > ul li.col_first {
-    clear:left; }
+    clear: left; }
 
 
 /*  Hide invisible elements */
