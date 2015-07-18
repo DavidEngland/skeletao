@@ -1,12 +1,18 @@
-/*  less stylesheets for contao
+/*
+    skeletao
+    combining skeleton css boilerplate and contao styles & structrues into
+    a kind of template for new contao projects
 
-    derived from:
-        /system/modules/calendar/templates/calendar/cal_default.html5
-        /system/modules/calendar/templates/calendar/cal_mini.html5
-        /system/modules/calendar/modules/ModuleCalendar.php
+    contao/*
+    these files should not be considered "ready to use". They show the structure
+    of contao output. Use only stuff you really need
 
+    contao/calendar.less
+    layout for calendar like views
+    derived from Contao 3.5.0 | LGPLv3 | www.contao.org
 
-*/
+    use lessc --clean-css skeletao/_index.less rendered-css/skeletao.css for production
+    */
 
 .common-calendar() {
     thead { /* header */
