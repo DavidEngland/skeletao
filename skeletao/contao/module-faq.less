@@ -1,13 +1,25 @@
- /*  less stylesheets for contao
+/*
+    skeletao
+    combining skeleton css boilerplate and contao styles & structrues into
+    a kind of template for new contao projects
 
-    derived from:
-        /system/modules/faq/templates/modules/mod_faqlist.html5
-        /system/modules/faq/templates/modules/mod_faqpage.html5
-        /system/modules/faq/templates/modules/mod_faqreader.html5
-        /system/modules/faq/modules/ModuleFaqList.html5
-        /system/modules/faq/modules/ModuleFaqPaste.html5
-        /system/modules/faq/modules/ModuleFaqReader.html5
-*/
+    contao/*
+    these files should not be considered "ready to use". They show the structure
+    of contao output. Use it as a kind of "reminder" and inspiration for custom
+    styles.
+
+    contao/module-*
+    modules might contain other modules or content elements
+
+    contao/module-faq.less
+    frequently asked questions core extension
+    derived from Contao 3.5.0 | LGPLv3 | www.contao.org
+
+    use lessc --clean-css skeletao/_index.less rendered-css/skeletao.css for production
+    */
+
+
+/*  list of faq links */
 
 .mod_faqlist {
     h2 { /* headline */ }
@@ -29,6 +41,8 @@
     }
 }
 
+
+/*  list of questions and answers */
 
 .mod_faqpage {
     article { /* faq category */
@@ -55,6 +69,7 @@
 }
 
 
+/*  reading a single faq */
 
 .mod_faqreader {
     h1 { /* question */ }
@@ -65,4 +80,3 @@
     /* backlink */
     /* commments */
 }
-

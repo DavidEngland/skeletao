@@ -1,0 +1,70 @@
+/*
+    skeletao
+    combining skeleton css boilerplate and contao styles & structrues into
+    a kind of template for new contao projects
+
+    contao/*
+    these files should not be considered "ready to use". They show the structure
+    of contao output. Use it as a kind of "reminder" and inspiration for custom
+    styles.
+
+    contao/module-*
+    modules might contain other modules or content elements
+
+    contao/module-news.less
+    (blog like) news core extension
+    derived from Contao 3.5.0 | LGPLv3 | www.contao.org
+
+    use lessc --clean-css skeletao/_index.less rendered-css/skeletao.css for production
+    */
+
+
+.news-layouts-mixin() {
+    .layout_full { /* full news layout */
+        h1 { /* news headline */ }
+        p.info { /* news meta data */
+            time { /* date news was posted */ }
+        }
+        h2 { /* subheadline, if available */ }
+
+        /* ce_text (for teaser, if available) */
+        /* enclosure */
+    }
+
+    .layout_simple { /* simple news layout */
+        time { /* date news was posted, if available */ }
+        h1, h2, h3, h4, h5, h6 { /* headline */
+            a { /* link to news */ }
+        }
+    }
+
+    .layout_latest, .layout_short  { /* latest news layout */
+        p.info { /* news meta data */
+            time { /* date news was posted */ }
+        }
+        h2 { /* news headline */ }
+        div.teaser { /* for teaser, if available */ }
+
+        /* link to "more" */
+    }
+
+    .layout_latest { /* image container */ }
+}
+
+
+.mod_newsmenu {
+    p.empty { /* if no articles available */ }
+    /* either uses navigation-mixin or minicalendar */
+}
+
+.mod_newsreader {
+    .news-layouts-mixin();
+    /* back link */
+    /* comments */
+}
+
+.mod_newsarchive, .mod_newslist {
+    p.empty { /* if no articles available */ }
+    .news-layouts-mixin();
+    /* pagination */
+}

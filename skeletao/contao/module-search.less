@@ -1,0 +1,49 @@
+/*
+    skeletao
+    combining skeleton css boilerplate and contao styles & structrues into
+    a kind of template for new contao projects
+
+    contao/*
+    these files should not be considered "ready to use". They show the structure
+    of contao output. Use it as a kind of "reminder" and inspiration for custom
+    styles.
+
+    contao/module-*
+    modules might contain other modules or content elements
+
+    contao/module-search.less
+    search form and results
+    derived from Contao 3.5.0 | LGPLv3 | www.contao.org
+
+    use lessc --clean-css skeletao/_index.less rendered-css/skeletao.css for production
+    */
+
+
+.mod_search, .mod_search_simple, .mod_search_advanced.less {
+    /* form widgets */
+}
+
+.mod_search {
+    p.header { /* search information, if available */ }
+
+    /* search results */
+    div {
+        &.first { /* first search result */ }
+        &.last { /* last search result */ }
+        &.even { /* even search result number */ }
+        &.odd { /* odd search result number */ }
+
+        h3 { /* title of search result */
+            a { /* link to search result */
+                span.relevance { /* relevance of search result */ }
+            }
+        }
+
+        p {
+            &.context { /* search context, if available */ }
+            &.url { /* url of search result */
+                span.size { /* size of search result */ }
+            }
+        }
+    }
+}

@@ -1,0 +1,66 @@
+/*
+    skeletao
+    combining skeleton css boilerplate and contao styles & structrues into
+    a kind of template for new contao projects
+
+    contao/*
+    these files should not be considered "ready to use". They show the structure
+    of contao output. Use it as a kind of "reminder" and inspiration for custom
+    styles.
+
+    contao/module-*
+    modules might contain other modules or content elements
+
+    contao/module-user.less
+    front end user: register, modify, login, logout
+    derived from Contao 3.5.0 | LGPLv3 | www.contao.org
+
+    use lessc --clean-css skeletao/_index.less rendered-css/skeletao.css for production
+    */
+
+
+.change_password, .mod_password {
+     /* form */
+}
+
+.login, .logout {
+
+    .formbody {
+        p {
+            &.error { /* error message when logging in */ }
+            &.login_info { /* logged in info when logging out */ }
+        }
+        label { }
+        input {
+            &.text { /* for username and password */ }
+            &.password { /* additionally to .text for password */ }
+        }
+        div.checkbox_container { /* remember me function, if available */
+            input.checkbox { /* input for remember me */ }
+            label { /* label for checkbox */ }
+        }
+        div.submit_container { /* container for submit button */ 
+            input.submit { /* submit button */ }
+        }
+    }
+
+    &.one_column.tableless { }
+
+    &.two_column.tableform {
+        table { /* table containing the input fields */
+            tr { /* every input field has its own row */
+                &.row_first { /* first row */ }
+                &.row_last { /* last row */ }
+                &.row_0 { /* first row */ }
+                &.row_1 { /* second row */ }
+                &.row_2 { /* third row */ }
+                &.row_3 { /* fourth row */ }
+
+                td {
+                    &.col_first, &.col_0 { /* firt column */ }
+                    &.col_last, &.col_1 { /* firt column */ }
+                }
+            }
+        }
+    }
+}

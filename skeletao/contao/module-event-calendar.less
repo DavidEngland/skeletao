@@ -1,0 +1,88 @@
+/*
+    skeletao
+    combining skeleton css boilerplate and contao styles & structrues into
+    a kind of template for new contao projects
+
+    contao/*
+    these files should not be considered "ready to use". They show the structure
+    of contao output. Use it as a kind of "reminder" and inspiration for custom
+    styles.
+
+    contao/module-*
+    modules might contain other modules or content elements
+
+    contao/module-event-calendar.less
+    event and calendar core extension
+    derived from Contao 3.5.0 | LGPLv3 | www.contao.org
+
+    use lessc --clean-css skeletao/_index.less rendered-css/skeletao.css for production
+    */
+
+
+.event-mixin() {
+    .event {
+        &.layout_full {
+            h1 { /* event title */ }
+            p {
+                &.info { /* date */
+                    time { /* time of event, if available */ }
+                }
+                &.recurring { /* recurring info, if available */ }
+                &.location { /* location, if available */ }
+            }
+            div.ce_text { /* teaser, if no details are available */ }
+        }
+
+        &.layout_upcoming {
+            &.even { /* every even event */ }
+            &.odd { /* every odd event */ }
+            span {
+                date { /* date */ }
+                time { /* time, if available */ }
+            }
+            a { /* link to event */ }
+            div.empty { /* no events found */ }
+        }
+
+        &.layout_teaser {
+            h2 { /* title of the event*/
+                a { /* link to event details, if available */ }
+            }
+            p.time { /* time and duration information, if available */ }
+            div.teaser { /* teaser text */ }
+        }
+
+        &.layout_list {
+            &.even { /* every even event */ }
+            &.odd { /* every odd event */ }
+            h2 { /* title of the event*/
+                a { /* link to event details, if available */ }
+            }
+            p.time { /* time and duration information, if available */ }
+            div.ce_text { /* details for the event */ }
+            div.empty { /* no events found */ }
+        }
+    }
+}
+
+
+
+.mod_calendar {
+    /* calendar or mini calendar */
+}
+
+.mod_event {
+    .event-mixin();
+    /* back link /*
+    /* comments */
+}
+
+.mod_eventlist {
+    .event-mixin();
+    /* pagination */
+}
+
+.mod_eventmenu {
+    /* navigation-mixin (level_0) for year and month calendar*/
+    /* navigation-mixin (level_1) for month calendar*/
+}

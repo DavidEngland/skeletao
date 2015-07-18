@@ -1,0 +1,101 @@
+/*
+    skeletao
+    combining skeleton css boilerplate and contao styles & structrues into
+    a kind of template for new contao projects
+
+    contao/*
+    these files should not be considered "ready to use". They show the structure
+    of contao output. Use it as a kind of "reminder" and inspiration for custom
+    styles.
+
+    contao/index.less
+    elements that will be used in many places in contao
+    derived from Contao 3.5.0 | LGPLv3 | www.contao.org
+
+    use lessc --clean-css skeletao/_index.less rendered-css/skeletao.css for production
+    */
+
+
+/*  simple elements */
+
+p.back a { /* used for links back to an overview page */ }
+
+p.more a { /* link to 'more' */ }
+
+p.message { /* the messages used when submitting forms or other stuff */
+    &.info { }
+    &.warning { }
+    &.error { }
+}
+
+.pdf_link { /* sharing buttons, if available */
+    a { /* different sharing links */
+        img { /* icons for sharing */ }
+    }
+}
+
+.enclosure { /* enclosures */
+    p {
+        img.mime_icon { /* file type icon */ }
+        a { /* link to file */
+            span.size { /* file size */ }
+        }
+    }
+}
+
+figure.image_container {
+    a { /* link with text, if available */ }
+    img { /* either standard image */ }
+    picture { /* or responsive images */
+        source { }
+        img { }
+    }
+    figcaption.caption { /* caption, if available */ }
+}
+
+
+/*  pagination
+
+    mod_article_nav specialities:
+        - no information about total pages
+        - uses li.link and a.link for "normal" links, just ignore it and define
+          a default styling for .pagination li and .pagination a
+
+    structure:
+        <div.pagination>
+            <p> Page 4 of 7
+            <ul>
+                <li.first>
+                    <a.first> 1
+                <li.previous>
+                    <a.previous> 3
+                <li.current>
+                    <span.current> 4
+                <li.next>
+                    <a.next> 5
+                <li.last>
+                    <a.last> 7
+    */
+
+.pagination {
+    p { /* 'page x of y', not in mod_article_nav */ }
+    ul {
+        li {
+            &.first { /* container for link to first page */ }
+            &.previous { /* container for link to previous page */ }
+            &.next { /* container for link to next page */ }
+            &.last { /* container for link to last page */ }
+
+            &.current { /* container displaying current page - no link */
+                span.current { /* current page */ }
+            }
+
+            a { /* links to pages, current page not linked */
+                &.first { /* link to first page */ }
+                &.previous { /* link to previous page */ }
+                &.next { /* link to next page */ }
+                &.last { /* link to last page */ }
+            }
+        }
+    }
+}

@@ -1,0 +1,92 @@
+/*
+    skeletao
+    combining skeleton css boilerplate and contao styles & structrues into
+    a kind of template for new contao projects
+
+    contao/*
+    these files should not be considered "ready to use". They show the structure
+    of contao output. Use it as a kind of "reminder" and inspiration for custom
+    styles.
+
+    contao/module-*
+    modules might contain other modules or content elements
+
+    contao/listing.less
+    TODO: I really can't remember where this is used ;-)
+    derived from Contao 3.5.0 | LGPLv3 | www.contao.org
+
+    use lessc --clean-css skeletao/_index.less rendered-css/skeletao.css for production
+    */
+
+.listing {
+   &.info_default {
+        table.single_record { /* one item */
+           tbody {
+               tr {
+                   &.row_first { /* first row */ }
+                   &.row_last { /* last row */ }
+                   &.row_even { /* even row number */ }
+                   &.row_odd { /* odd row number */ }
+                   /* row numbers: row_0, row_1, row_2 */
+
+                   td {
+                       &.label { /* label, first column */ }
+                       &.value { /* value, second and last column */ }
+                   }
+               }
+           }
+       }
+       /* backlink  */
+   }
+
+   &.list_default {
+       &.ce_table { /* this is a table content element */ }
+
+       .list_search { /* search, if available */
+           form {
+               .formbody {
+                   lable.invisible { /* label for screen readers,  invisible  */ }
+                   select.select { /* field to search in */
+                       option { }
+                   }
+                   input {
+                       &.text { /* search term input */ }
+                       &.submit { /* submit button */ }
+                   }
+               }
+           }
+       }
+
+       .list_per_page { /* item per page setting, if available */
+           form {
+               .formbody {
+                   lable.invisible { /* label for screen readers,  invisible  */ }
+                   select.select { /* items per page selection */
+                       option { }
+                   }
+                   input.submit { /* submit button */ }
+               }
+           }
+       }
+
+       table.all_records { /* all found items, only differences to ce_table shown */
+           thead {
+               th.head {
+                   &.col_even { /* even column number */ }
+                   &.col_odd { /* odd column number */ }
+                   a { /* sort by this column */ }
+               }
+           }
+           tbody {
+               td.body {
+                   &.col_even { /* even column number */ }
+                   &.col_odd { /* odd column number */ }
+
+                   a img { /* link to details, if available */ }
+               }
+           }
+       }
+
+       /* pagination */
+   }
+}

@@ -1,0 +1,71 @@
+/*
+    skeletao
+    combining skeleton css boilerplate and contao styles & structrues into
+    a kind of template for new contao projects
+
+    contao/*
+    these files should not be considered "ready to use". They show the structure
+    of contao output. Use it as a kind of "reminder" and inspiration for custom
+    styles.
+
+    contao/module-*
+    modules might contain other modules or content elements
+
+    contao/module-newsletter.less
+    newsletter core extension
+    derived from Contao 3.5.0 | LGPLv3 | www.contao.org
+
+    use lessc --clean-css skeletao/_index.less rendered-css/skeletao.css for production
+    */
+
+
+/*  subscribe and unsubscribe */
+
+.mod_newsletter {
+    p { /* messageges to display  */
+        &.error { /* error message */ }
+        &.confirm { /* confirmation message */ }
+    }
+
+    form {
+        .formbody {
+            p { /* messageges to display  */
+                &.error { /* error message */ }
+                &.confirm { /* confirmation message */ }
+            }
+
+            label.invisible { /* labels for screen readers */ }
+            input.text { /* input field for subscribers email address */ }
+
+            .checkbox_container { /* newsletter channels, if available */
+                span { /* newsletter channel */
+                    input.checkbox { }
+                    label { /* label for checkbox */ }
+                }
+            }
+
+            input.submit { /* submit button */ }
+        }
+    }
+}
+
+
+/*  list of available newsletter */
+
+.mod_newsletter_list {
+    ul {
+        li {
+            a { /* link to newsletter */ }
+        }
+    }
+}
+
+
+/*  reading one newsletter */
+
+.mod_newsletter_reader {
+    h1 { /* subject of newsletter */ }
+    div.content { /* content of newsletter */ }
+
+    /* enclosure */
+}

@@ -1,0 +1,140 @@
+/*
+    skeletao
+    combining skeleton css boilerplate and contao styles & structrues into
+    a kind of template for new contao projects
+
+    contao/*
+    these files should not be considered "ready to use". They show the structure
+    of contao output. Use it as a kind of "reminder" and inspiration for custom
+    styles.
+
+    contao/forms.less
+    forms as used in contao
+    derived from Contao 3.5.0 | LGPLv3 | www.contao.org
+
+    use lessc --clean-css skeletao/_index.less rendered-css/skeletao.css for production
+    */
+
+
+/*  Widgets, the input fields, labels, etc */
+
+.formwidgets() {
+    .formbody {
+
+        /* the label part */
+        label {
+            &.mandatory {
+                span.mandatory { /* the small star indicating a mandatory field */ }
+            }
+            &.confirm { /* for the password confirmation field */}
+        }
+
+        /* the input part */
+        p.error { /* error message, if available */ }
+
+        input {
+            &.mandatory { }
+
+            &.captcha { }
+            &.password { }
+            &.text { }
+            &.submit { }
+            &.upload { }
+        }
+
+        select {
+            &.mandatory { }
+            &.mutliselect { }
+
+            optgroup { }
+            option { }
+        }
+
+        textarea {
+            &.textarea { }
+            &.mandatory { }
+        }
+
+        fieldset {
+            &.checkbox_container { }
+            &.radio_container { }
+
+            span {
+                input.checkbox { }
+                input.radio { }
+                label { }
+            }
+
+            legend { /* if available */
+                span.mandatory { /* the small star indicating a mandatory field */ }
+                span.invisible { /* text for screen reader for mandatory fields */ }
+            }
+            p.error { /* error message, if available */ }
+        }
+
+        /* extras */
+        span.captcha_text { /* the text to solve */ }
+        div.submit-container { /* containing input.submit button in submit widget */ }
+    }
+}
+
+
+/* a tableless form, using divs for layout */
+
+.tableless() {
+    .formbody {
+        div.widget { /* the form "rows" */
+            &.widget-captcha { }
+            &.widget-checkbox { }
+            &.widget-explanation { }
+            &.widget-headline { }
+            &.widget-password { }
+            &.widget-radio { }
+            &.widget-select { }
+            &.widget-submit { }
+            &.widget-textarea { }
+            &.widget-text { }
+            &.widget-upload { }
+        }
+    }
+}
+
+
+/*  form using html tables for layout*/
+
+.tableform() {
+    .formbody {
+        table { /* only for table based layout */
+            tr { /* form rows */
+                &.row_first { /* first row */ }
+                &.row_last { /* last row */ }
+                &.even { /* even row number */ }
+                &.odd { /* odd row number */ }
+                /* row number classes: &.row_0 &.row_1, ... */
+
+                td {
+                    &.col_0, .col_first { /* labels are placed here */ }
+                    &.col_1, .col_last { /* inputs are placed here */ }
+                    &.colspan { /* for widgets spanning both columns */
+                        &.explanation { /* explanation widget */ }
+                        &.headline { }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* form mixin */
+
+.form-mixin() {
+    .formwidgets();
+    .tableless();
+    .tableform();
+}
+
+.mod_form {
+    /* modules can contain headlines h1 - h6 */
+    .form-mixin()
+}

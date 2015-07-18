@@ -1,0 +1,55 @@
+/*
+    skeletao
+    combining skeleton css boilerplate and contao styles & structrues into
+    a kind of template for new contao projects
+
+    contao/*
+    these files should not be considered "ready to use". They show the structure
+    of contao output. Use it as a kind of "reminder" and inspiration for custom
+    styles.
+
+    contao/module-*
+    modules might contain other modules or content elements
+
+    contao/module-article.less
+    articles, the basic content container
+    derived from Contao 3.5.0 | LGPLv3 | www.contao.org
+
+    use lessc --clean-css skeletao/_index.less rendered-css/skeletao.css for production
+    */
+
+
+.mod_article {
+    /* sharing links, see index.less  */
+    /* back link, see index.less  */
+    .first { /* first content element */ }
+    .last { /* last content element */ }
+}
+
+
+.mod_article_list {
+    ul {
+        li {
+            a { }
+        }
+    }
+}
+
+
+.mod_article_teaser {
+    .ce_text {
+        h2 { /* article headline */ }
+        div.teaser { /* article teaser */
+            /* link to "more" (complete article), see index.less */
+        }
+    }
+}
+
+
+.mod_article_nav {
+    /* navigation mixin */
+    /* pagination() */
+}
+
+
+.mod_article_plain { }

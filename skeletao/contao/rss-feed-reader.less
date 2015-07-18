@@ -1,0 +1,44 @@
+/*
+    skeletao
+    combining skeleton css boilerplate and contao styles & structrues into
+    a kind of template for new contao projects
+
+    contao/*
+    these files should not be considered "ready to use". They show the structure
+    of contao output. Use it as a kind of "reminder" and inspiration for custom
+    styles.
+
+    contao/rss-feed-reader.less
+    displaying content from rss feeds
+    derived from Contao 3.5.0 | LGPLv3 | www.contao.org
+
+    use lessc --clean-css skeletao/_index.less rendered-css/skeletao.css for production
+    */
+
+
+.rss_default, .rss_items_only {
+
+    .rss_default, .rss_items_only { /* feed items */
+        &.first { /* first item */ }
+        &.last { /* last item */ }
+        &.even { /* even item number */ }
+        &.odd  { /* odd item number */ }
+
+        h2 { /* link to item title */
+            a { /* link to item title */ }
+        }
+        .description { /* description of item */ }
+    }
+}
+
+.rss_default { /* rss_defaults has also a header */
+    .rss_default_header {
+        h1 { /* link to feed page */
+            a { }
+        }
+        a { /*linking page image, if available */
+            img { }
+        }
+        .description { /* description of feed */ }
+    }
+}
