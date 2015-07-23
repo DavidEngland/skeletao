@@ -49,8 +49,10 @@ header, footer, nav, section, aside, article, figure, figcaption {
     centering of content is only applied if screen size is largen than tablet
     */
 
-@media (min-width: @larger-than-tablet) {
-    #main, #left, #right {
+@media (min-width: @larger-than-phablet) {
+    /* nav (left) column shows */
+
+    #main, #left {
        	float: left;
        	position: relative; }
 
@@ -64,8 +66,7 @@ header, footer, nav, section, aside, article, figure, figcaption {
        	width: 100%; }
 
     #container {
-       padding-left: @layout-left-column-width;
-       padding-right: @layout-right-column-width; }
+       padding-left: @layout-left-column-width;}
 
     #left {
        	margin-left: -100%;
@@ -73,8 +74,12 @@ header, footer, nav, section, aside, article, figure, figcaption {
         right: @layout-left-column-width; }
 
     #right {
-       	margin-right: -100%;
-        width: @layout-right-column-width; }
+        @media (max-width: (@larger-than-tablet - 1)) {
+            clear:both;
+            position: relative;
+            margin-left: -@layout-left-column-width;;
+        }
+    }
 
     #footer {
        	clear: both;
@@ -84,8 +89,25 @@ header, footer, nav, section, aside, article, figure, figcaption {
        	min-height:1px; }
 }
 
+@media (min-width: @larger-than-tablet) {
+    /* both columns show */
 
-@media (min-width: @larger-than-desktop) {
+    #right {
+       	float: left;
+       	position: relative; }
+
+     #container {
+       padding-right: @layout-right-column-width; }
+
+    #right {
+       	margin-right: -100%;
+        width: @layout-right-column-width; }
+}
+
+
+@media (min-width: @larger-than-layout) {
+    /* layout is centered */
+
     #wrapper {
         width: @layout-centered-width;
         margin: 0 auto; }

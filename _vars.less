@@ -9,20 +9,21 @@
     */
 
 
-// widths for media queries, remember: mobile first!
-@larger-than-mobile:      400px;
-@larger-than-phablet:     550px;
-@larger-than-tablet:      750px;
-@larger-than-desktop:    1000px;
-@larger-than-desktop-hd: 1200px;
-
-
 // layout settings
 @layout-centered-width:     960px;
 @layout-header-height:       auto;
 @layout-footer-height:       auto;
 @layout-left-column-width:  200px;
 @layout-right-column-width: 200px;
+
+
+// widths for media queries, remember: mobile first!
+@larger-than-mobile:      400px; // from skeleton css
+@larger-than-phablet:     550px; // from skeleton css, headline size increases, nav (left) column shows
+@larger-than-tablet:      750px; // from skeleton css, both column show
+@larger-than-desktop:    1000px; // from skeleton css
+@larger-than-desktop-hd: 1200px; // from skeleton css
+@larger-than-layout:     (@layout-centered-width + 10); // layout is centered
 
 
 // font family

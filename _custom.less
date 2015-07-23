@@ -22,11 +22,24 @@
    These down here should be a considered a copy-pase-template
    */
 
-@media (min-width: @larger-than-mobile) {}
-@media (min-width: @larger-than-phablet) {}
-@media (min-width: @larger-than-tablet) {}
-@media (min-width: @larger-than-desktop) {}
-@media (min-width: @larger-than-desktop-hd) {}
+@media (min-device-width: @larger-than-mobile) {
+    /* from skeleton css, for completeness */
+}
+@media (min-device-width: @larger-than-phablet) {
+    /* headline size increases, nav (left) column shows */
+}
+@media (min-device-width: @larger-than-tablet) {
+    /* both column show */
+}
+@media (min-device-width: @larger-than-layout) {
+    /* layout is centered */
+}
+@media (min-device-width: @larger-than-desktop) {
+    /* from skeleton css, for completeness */
+}
+@media (min-device-width: @larger-than-desktop-hd) {
+    /* from skeleton css, for completeness */
+}
 
 
 /*  Custom Styles
