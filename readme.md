@@ -2,7 +2,7 @@
 skeletao
 ========
 
-"Skeletao" should be considered a scaffold or template for building stylesheets. 
+"Skeletao" should be considered a scaffold or template for building stylesheets.
 
 It is based on three different projects:
 
@@ -25,10 +25,10 @@ What it isn't
 It is definitely not a "use this and you've got a beautiful site" thingy.
 
 
-Combining the "Holy Grail Layout" and responsiveness
-----------------------------------------------------
+"Holy Grail Layout" and responsiveness
+--------------------------------------
 
-The contao cms layout is build around the ["holy-grail-layout"][holygrail], the skeleton boilerplate on the other hand does specify a grid based system. For skeletao, the grid system was removed and the holy-grail-layout adopted to use breakpoints derived from skeleton. 
+The contao cms layout is build around the ["holy-grail-layout"][holygrail], the skeleton boilerplate on the other hand does specify a grid based system. For skeletao, the grid system was removed and the holy-grail-layout adopted to use breakpoints derived from skeleton.
 
 The holy-grail-layout defines three columns that should be aligned side by side: left (mostly used for navigation), main and right (e.g. for additional info). In skeletao there are the following breakpoints defined:
 
@@ -60,7 +60,7 @@ Usage
 Mostly only the `_vars.less`, `_custom.less` and `contao/*` files need to be edited. But this is only a rule of thumb.
 
 For development I use this command: `lessc index.less output.css`
-    
+
 For production I change `@media (min-width:` to `@media (min-device-width:` in all files and use the `--clean-css` switch on the `lessc` command: `lessc --clean-css index.less output.css`.
 
 
