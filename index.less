@@ -7,7 +7,10 @@
     setup and imports of relevant styles
     media queries derived from Skeleton V2.0.4 | MIT license | www.getskeleton.com
 
-    use lessc --clean-css skeletao/_index.less rendered-css/skeletao.css for production
+    for production:
+      - change  '@media (min-width:' to '@media (min-device-width:' in all files
+      - use the '--clean-css' switch like
+        lessc --clean-css index.less output.css
     */
 
 
@@ -15,8 +18,7 @@
 @import (reference) "_vars.less";
 
 // normalize styles across browsers
-// @import (inline) "normalize.css"; // for production to generate one css file
-@import "normalize.css";
+@import (inline) "normalize.css";
 
 // import basic styles, mostly derived from skeleton
 @import "styles.less";
