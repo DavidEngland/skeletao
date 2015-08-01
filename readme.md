@@ -39,6 +39,8 @@ The holy-grail-layout defines three columns that should be aligned side by side:
 
 All these measurements are variables, so they are easy to adopt.
 
+For the holy-grail-layout the CSS3 flex box syntax is used in all modern browsers. There is a fallback available for Internet Explorer 10 or lower that still uses the old css float method. Luckily contao provides some browser sniffing by assigning the relevant classes to the body element.
+
 
 Files
 -----

@@ -1,0 +1,109 @@
+/*
+    skeletao
+    combining skeleton css boilerplate and contao styles & structrues into
+    a kind of template for new contao projects
+
+    holy-grail-layout.less
+    setup of "holy grail layout"
+    derived from Contao 3.5.0 | LGPLv3 | www.contao.org
+    */
+
+
+// import variables used throughout the less files
+@import (reference) "_vars.less";
+
+
+/*  Holy grail CSS layout, the "original" legacy one
+
+    see http://www.alistapart.com/articles/holygrail
+    only applied if screen size is tablet or higher
+    centering of content is only applied if screen size is largen than tablet
+
+    This is for all the old Internet explorers out there
+        - Intenet Explorer < 10 will ignore the flex box
+        - Intenet Explorer 10 only supports the old flex box syntax,
+          therefore should use the fallback
+    */
+
+body.ie6, body.ie7, body.ie8, body.ie9, body.ie10 {
+
+    @media (min-width: @larger-than-phablet) {
+
+        /*  Fix some positioning issues */
+
+        #container, .inside {
+            position:relative;
+        }
+
+
+        /*  Custom layout sections */
+
+        #container:after, .custom:after {
+            content:"";
+            display:table;
+            clear:both; }
+
+
+        /* nav (left) column shows */
+
+        #main, #left {
+            float: left;
+            position: relative; }
+
+        #wrapper {
+            width: 100%; }
+
+        #header {
+            height: @layout-header-height; }
+
+        #main {
+            width: 100%; }
+
+        #container {
+           padding-left: @layout-left-column-width;}
+
+        #left {
+            margin-left: -100%;
+            width: @layout-left-column-width;
+            right: @layout-left-column-width; }
+
+        #right {
+            @media (max-width: (@larger-than-tablet - 1)) {
+                clear:both;
+                position: relative;
+                margin-left: -@layout-left-column-width;;
+            }
+        }
+
+        #footer {
+            clear: both;
+            height: @layout-footer-height; }
+
+        #main .inside {
+            min-height:1px; }
+    }
+
+    @media (min-width: @larger-than-tablet) {
+        /* both columns show */
+
+        #right {
+            float: left;
+            position: relative; }
+
+         #container {
+           padding-right: @layout-right-column-width; }
+
+        #right {
+            margin-right: -100%;
+            width: @layout-right-column-width; }
+    }
+
+
+    @media (min-width: @larger-than-layout) {
+        /* layout is centered */
+
+        #wrapper {
+            width: @layout-centered-width;
+            margin: 0 auto; }
+    }
+}
