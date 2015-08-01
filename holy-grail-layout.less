@@ -1,0 +1,88 @@
+/*
+    skeletao
+    combining skeleton css boilerplate and contao styles & structrues into
+    a kind of template for new contao projects
+
+    holy-grail-layout.less
+    setup of "holy grail layout"
+    derived from Contao 3.5.0 | LGPLv3 | www.contao.org
+    */
+
+
+// import variables used throughout the less files
+@import (reference) "_vars.less";
+
+
+/*  Holy grail CSS layout, the flex type
+
+    see http://www.alistapart.com/articles/holygrail
+    only applied if screen size is tablet or higher
+    centering of content is only applied if screen size is largen than tablet
+
+    This is targeted at all modern browsers.
+        - Intenet Explorer < 10 will ignore the flex box
+        - Intenet Explorer 10 only supports the old flex box syntax,
+          therefore should use the fallback
+    */
+
+body:not(.ie10) {
+
+    @media (min-width: @larger-than-phablet) {
+
+        /* nav (left) column shows */
+
+        #header {
+            height: @layout-header-height; }
+
+        #wrapper {
+            width: 100%;
+            }
+
+        #container {
+            display: flex;
+            display: -webkit-flex;
+            flex:1;
+            -webkit-flex:1;
+            flex-direction: row;
+            -webkit-flex-direction: row;
+            }
+
+        #main {
+            flex: 1;
+            -webkit-flex: 1;
+            }
+
+        #left {
+            flex: 0 0 @layout-left-column-width;
+            -webkit-flex: 0 0 @layout-left-column-width;
+            order: -1;
+            -webkit-order: -1;
+            }
+
+        #right {
+            }
+
+        #footer {
+            height: @layout-footer-height;
+            }
+
+    }
+
+    @media (min-width: @larger-than-tablet) {
+        /* both columns show */
+
+        #right {
+            flex: 0 0 @layout-right-column-width;
+            -webkit-flex: 0 0 @layout-right-column-width;
+            }
+    }
+
+
+    @media (min-width: @larger-than-layout) {
+        /* layout is centered */
+
+        #wrapper {
+            width: @layout-centered-width;
+            margin: 0 auto; }
+    }
+}
